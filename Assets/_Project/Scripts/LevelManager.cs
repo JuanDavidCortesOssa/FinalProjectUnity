@@ -141,7 +141,7 @@ namespace ConquistaGO
             {
                 Vector3 enemyRelativePosition = SquareReferencedPosition(levelSO.level.enemiesData[i].initialSquare);
                 Vector3 enemyInGamePosition = ToGamePosition(enemyRelativePosition);
-                GameObject enemyGO = new GameObject();
+                GameObject enemyGO = null;
                 Enemy enemy = null;
 
                 switch (levelSO.level.enemiesData[i].enemyType)
@@ -149,14 +149,18 @@ namespace ConquistaGO
                     case Enemy.EnemyData.EnemyType.Lancer:
                         enemyGO = PrefabUtility.InstantiatePrefab(enemyLancerPrefab) as GameObject;
                         enemy = enemyGO.GetComponent<EnemyLancer>();
+                        enemyGO.transform.rotation = Quaternion.Euler(enemy.GetEnemyRotationAngle());
                         break;
                     case Enemy.EnemyData.EnemyType.Warrior:
                         enemyGO = PrefabUtility.InstantiatePrefab(enemyWarriorPrefab) as GameObject;
                         enemy = enemyGO.GetComponent<EnemyWarrior>();
+                        enemyGO.transform.rotation = Quaternion.Euler(enemy.GetEnemyRotationAngle());
                         break;
                     case Enemy.EnemyData.EnemyType.dagger:
                         enemyGO = PrefabUtility.InstantiatePrefab(enemyDaggerPrefab) as GameObject;
                         enemy = enemyGO.GetComponent<EnemyDagger>();
+                        enemyGO.transform.rotation = Quaternion.Euler(enemy.GetEnemyRotationAngle());
+                        Debug.Log(enemy.GetEnemyRotationAngle());
                         break;
                     default:
                         break;

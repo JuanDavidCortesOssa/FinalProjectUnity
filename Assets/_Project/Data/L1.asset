@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b4250f4cea8c744b8dfc784c815f50f, type: 3}
+  m_Name: L1
+  m_EditorClassIdentifier: 
+  level:
+    board:
+      squares:
+      - position: {x: 2, y: -1, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 0
+        connections: 0600000002000000
+        state: 0
+        squareId: 1
+        isVisited: 0
+      - position: {x: 3, y: -1, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 0
+        connections: 0100000003000000
+        state: 0
+        squareId: 2
+        isVisited: 0
+      - position: {x: 4, y: -1, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 0
+        connections: 0200000008000000
+        state: 0
+        squareId: 3
+        isVisited: 0
+      - position: {x: 0, y: 0, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 0
+        connections: 05000000
+        state: 0
+        squareId: 4
+        isVisited: 0
+      - position: {x: 1, y: 0, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 0
+        connections: 0400000006000000
+        state: 0
+        squareId: 5
+        isVisited: 0
+      - position: {x: 2, y: 0, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 0
+        connections: 050000000100000007000000
+        state: 0
+        squareId: 6
+        isVisited: 0
+      - position: {x: 3, y: 0, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 0
+        connections: 060000000800000009000000
+        state: 0
+        squareId: 7
+        isVisited: 0
+      - position: {x: 4, y: 0, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 0
+        connections: 0700000003000000
+        state: 0
+        squareId: 8
+        isVisited: 0
+      - position: {x: 3, y: 1, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 0
+        connections: 070000000a000000
+        state: 0
+        squareId: 9
+        isVisited: 0
+      - position: {x: 3, y: 2, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 1
+        connections: 09000000
+        state: 0
+        squareId: 10
+        isVisited: 0
+    playerData:
+      state: 0
+      orientation: {x: 0, y: 0, z: 0}
+      currentTurn: {fileID: 0}
+      entityItems: []
+      initialSquare: 4
+      currentPosition: {x: 0, y: 0, z: 0}
+      isMoving: 0
+    enemiesData:
+    - state: 1
+      orientation: {x: 1, y: 0, z: 0}
+      currentTurn: {fileID: 0}
+      entityItems: []
+      initialSquare: 6
+      currentPosition: {x: 2, y: 0, z: 0}
+      isMoving: 0
+      enemyType: 2
+      goldAttractionPath: []
+    - state: 1
+      orientation: {x: -1, y: 0, z: 0}
+      currentTurn: {fileID: 0}
+      entityItems: []
+      initialSquare: 8
+      currentPosition: {x: 4, y: 0, z: 0}
+      isMoving: 0
+      enemyType: 2
+      goldAttractionPath: []
+    items: []
+  jSon: 
