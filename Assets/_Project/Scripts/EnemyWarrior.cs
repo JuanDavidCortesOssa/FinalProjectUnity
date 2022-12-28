@@ -132,6 +132,7 @@ namespace ConquistaGO
         {
             enemyData.isMoving = true;
             enemyData.orientation = newCurrentPosition - enemyData.currentPosition;
+            transform.DORotate(GetEnemyRotationAngle(), 0.1f);
             transform.DOMove(doMovePosition, GameSettings.movementAnimationDuration).OnComplete(
                 () =>
                 {

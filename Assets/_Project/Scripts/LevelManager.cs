@@ -21,7 +21,11 @@ namespace ConquistaGO
         public GameObject playerPrefab;
 
         [FoldoutGroup("Enemy")]
-        public GameObject enemyPrefab;
+        public GameObject enemyWarriorPrefab;
+        [FoldoutGroup("Enemy")]
+        public GameObject enemyLancerPrefab;
+        [FoldoutGroup("Enemy")]
+        public GameObject enemyDaggerPrefab;
 
         [FoldoutGroup("Item")]
         public GameObject goldPrefab;
@@ -137,19 +141,22 @@ namespace ConquistaGO
             {
                 Vector3 enemyRelativePosition = SquareReferencedPosition(levelSO.level.enemiesData[i].initialSquare);
                 Vector3 enemyInGamePosition = ToGamePosition(enemyRelativePosition);
-                GameObject enemyGO = PrefabUtility.InstantiatePrefab(enemyPrefab) as GameObject;
+                GameObject enemyGO = new GameObject();
                 Enemy enemy = null;
 
                 switch (levelSO.level.enemiesData[i].enemyType)
                 {
                     case Enemy.EnemyData.EnemyType.Lancer:
-                        enemy = enemyGO.AddComponent<EnemyLancer>();
+                        enemyGO = PrefabUtility.InstantiatePrefab(enemyLancerPrefab) as GameObject;
+                        enemy = enemyGO.GetComponent<EnemyLancer>();
                         break;
                     case Enemy.EnemyData.EnemyType.Warrior:
-                        enemy = enemyGO.AddComponent<EnemyWarrior>();
+                        enemyGO = PrefabUtility.InstantiatePrefab(enemyWarriorPrefab) as GameObject;
+                        enemy = enemyGO.GetComponent<EnemyWarrior>();
                         break;
                     case Enemy.EnemyData.EnemyType.dagger:
-                        enemy = enemyGO.AddComponent<EnemyDagger>();
+                        enemyGO = PrefabUtility.InstantiatePrefab(enemyDaggerPrefab) as GameObject;
+                        enemy = enemyGO.GetComponent<EnemyDagger>();
                         break;
                     default:
                         break;
@@ -169,7 +176,7 @@ namespace ConquistaGO
             player.playerData.currentPosition = playerRelativePosition;
             player.playerData.state = EntityData.State.Active;
             player.transform.position = new Vector3(playerInGamePosition.x, GameSettings.playerHeight, playerInGamePosition.z);
-            Debug.Log(player.playerData.camouflageAbility.state);
+            //Debug.Log(player.playerData.camouflageAbility.state);
 
             for (int i = 0; i < levelSO.level.items.Count; i++)
             {

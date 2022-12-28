@@ -38,5 +38,24 @@ namespace ConquistaGO
             enemyData.goldAttractionPath = levelManager.PathFinding(levelManager.SquareReferencedId(enemyData.currentPosition), attractionSquareId);
             Debug.Log(enemyData.enemyType + "Attracted to" + attractionSquareId);
         }
+
+        public Vector3 GetEnemyRotationAngle()
+        {
+            Vector3 angle = Vector3.zero; 
+            if (enemyData.orientation == Vector3.left)
+            {
+                angle.y = 180;
+            }
+            else if (enemyData.orientation == Vector3.up)
+            {
+                angle.y = 270;
+            }
+            else if (enemyData.orientation == Vector3.down)
+            {
+                angle.y = 90;
+            }
+
+            return angle;
+        }
     }
 }
