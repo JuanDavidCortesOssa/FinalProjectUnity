@@ -49,6 +49,8 @@ namespace ConquistaGO
                     player.playerData.camouflageAbility.state == PlayerManager.PlayerData.Abilities.State.Unavailable
                     && gameObject.activeSelf)
                 {
+                    MoveEnemy(levelManager.ToGamePosition(player.playerData.currentPosition) + new Vector3(0f, GameSettings.enemyHeight, 0f), 
+                        player.playerData.currentPosition);
                     PlayerManager.Instance.Kill(levelManager);
                 }
             }

@@ -19,7 +19,9 @@ namespace ConquistaGO
             Debug.Log("Win");
             PlayerManager.Instance.SetActive(false);
             yield return new WaitForSeconds(0.5f);
-            Time.timeScale = 0;
+            UIManagerJ.Instance.ActivateWinCanvas();
+            //Time.timeScale = 0;
+            //yield return null;
         }
 
     }

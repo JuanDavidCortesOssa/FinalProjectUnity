@@ -16,9 +16,12 @@ namespace ConquistaGO
         /// <returns></returns>
         public override IEnumerator Start()
         {
-            PlayerManager.Instance.SetActive(false);
+            //PlayerManager.Instance.SetActive(false);
+            PlayerManager.Instance.gameObject.SetActive(false);
             yield return new WaitForSeconds(0.5f);
-            Time.timeScale = 0;
+            UIManagerJ.Instance.ActivateLoseCanvas();
+            //Time.timeScale = 0;
+            //yield return null;
         }
     }
 }
