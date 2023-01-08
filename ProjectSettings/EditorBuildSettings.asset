@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/_Project/Scenes/Finals/Home.unity
     guid: c64bee2477dcc614c893eaa321904557
   - enabled: 1
-    path: Assets/_Project/Scenes/Finals/Level1.unity
+    path: Assets/_Project/Scenes/Finals/Level2.unity
     guid: 344b429e46e98a34389144c4294b8cfb
   m_configObjects: {}
