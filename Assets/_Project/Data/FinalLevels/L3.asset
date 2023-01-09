@@ -195,5 +195,9 @@ MonoBehaviour:
       isMoving: 0
       enemyType: 1
       goldAttractionPath: []
-    items: []
+    items:
+    - itemType: 1
+      currentSquare: 11
+      initialSquare: 11
+      throwingSquares: 
   jSon: 

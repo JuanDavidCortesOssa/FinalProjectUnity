@@ -6,9 +6,12 @@ namespace ConquistaGO
 {
     public partial class LevelManager : StateMachine
     {
+        private PlayerManager playerManager;
+
         private void Start()
         {
             SetState(new InitialState(this));
+            playerManager = PlayerManager.Instance;
         }
 
         void Update()
@@ -223,5 +226,42 @@ namespace ConquistaGO
             }
             return vectorPath;
         }
+
+        /// <summary>
+        /// This method activates the squares with goldThrowingTargets
+        /// </summary>
+        /// <param name="levelManager"></param>
+        public void ActivateGoldThrowingTargets()
+        {
+            for (int i = 0; i < squares.Count; i++)
+            {
+                Square square = squares[i].GetComponent<Square>();
+                List<int> goldThrowingSquares = playerManager.playerData.goldThrowingAbility.aimSquares;
+                for (int j = 0; j < goldThrowingSquares.Count; j++)
+                {
+                    if (square.squareData.squareId == goldThrowingSquares[j])
+                    {
+                        square.SetGoldTargetActive(true);
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// This method deactivates the GoldThrowingTargets
+        /// </summary>
+        /// <param name="levelManager"></param>
+        public void DectivateGoldThrowingTargets()
+        {
+            for (int i = 0; i < squares.Count; i++)
+            {
+                Square square = squares[i].GetComponent<Square>();
+                if (square.goldThrowingTargetGO.activeSelf)
+                {
+                    square.SetGoldTargetActive(false);
+                }
+            }
+        }
     }
+
 }

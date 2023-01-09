@@ -17,67 +17,76 @@ MonoBehaviour:
       squares:
       - position: {x: 1, y: 0, z: 0}
         isSpecialSquare: 0
-        targetSquare: {fileID: 0}
+        targetSquare: 0
         isFinalSquare: 0
         connections: 0600000007000000
         state: 0
         squareId: 1
+        isVisited: 0
       - position: {x: 0, y: 1, z: 0}
         isSpecialSquare: 0
-        targetSquare: {fileID: 0}
+        targetSquare: 0
         isFinalSquare: 0
         connections: 0600000003000000
         state: 0
         squareId: 2
+        isVisited: 0
       - position: {x: 1, y: 1, z: 0}
         isSpecialSquare: 0
-        targetSquare: {fileID: 0}
+        targetSquare: 0
         isFinalSquare: 0
         connections: 02000000
         state: 0
         squareId: 3
+        isVisited: 0
       - position: {x: 2, y: 1, z: 0}
         isSpecialSquare: 0
-        targetSquare: {fileID: 0}
+        targetSquare: 0
         isFinalSquare: 0
         connections: 0900000007000000
         state: 0
         squareId: 4
+        isVisited: 0
       - position: {x: 1, y: 2, z: 0}
         isSpecialSquare: 0
-        targetSquare: {fileID: 0}
+        targetSquare: 0
         isFinalSquare: 0
         connections: 0800000009000000
         state: 0
         squareId: 5
+        isVisited: 0
       - position: {x: 0, y: 0, z: 0}
         isSpecialSquare: 0
-        targetSquare: {fileID: 0}
+        targetSquare: 0
         isFinalSquare: 0
         connections: 0200000001000000
         state: 0
         squareId: 6
+        isVisited: 0
       - position: {x: 2, y: 0, z: 0}
         isSpecialSquare: 0
-        targetSquare: {fileID: 0}
+        targetSquare: 0
         isFinalSquare: 0
         connections: 0400000001000000
         state: 0
         squareId: 7
+        isVisited: 0
       - position: {x: 0, y: 2, z: 0}
         isSpecialSquare: 0
-        targetSquare: {fileID: 0}
+        targetSquare: 0
         isFinalSquare: 0
         connections: 05000000
         state: 0
         squareId: 8
+        isVisited: 0
       - position: {x: 2, y: 2, z: 0}
         isSpecialSquare: 0
-        targetSquare: {fileID: 0}
+        targetSquare: 0
         isFinalSquare: 0
         connections: 0500000004000000
         state: 0
         squareId: 9
+        isVisited: 0
     playerData:
       state: 0
       orientation: {x: 0, y: 0, z: 0}
@@ -86,7 +95,6 @@ MonoBehaviour:
       initialSquare: 3
       currentPosition: {x: 0, y: 0, z: 0}
       isMoving: 0
-      playerAbilities: []
     enemiesData:
     - state: 0
       orientation: {x: 1, y: 0, z: 0}
@@ -96,5 +104,10 @@ MonoBehaviour:
       currentPosition: {x: 0, y: 0, z: 0}
       isMoving: 0
       enemyType: 1
-    items: []
+      goldAttractionPath: []
+    items:
+    - itemType: 0
+      currentSquare: 0
+      initialSquare: 0
+      throwingSquares: 0000000000000000
   jSon: '{"board":{"squares":[{"position":{"x":1.0,"y":0.0,"z":0.0},"isSpecialSquare":false,"targetSquare":{"instanceID":0},"isFinalSquare":false,"connections":[6,7],"state":0,"squareId":1},{"position":{"x":0.0,"y":1.0,"z":0.0},"isSpecialSquare":false,"targetSquare":{"instanceID":0},"isFinalSquare":false,"connections":[6,3],"state":0,"squareId":2},{"position":{"x":1.0,"y":1.0,"z":0.0},"isSpecialSquare":false,"targetSquare":{"instanceID":0},"isFinalSquare":false,"connections":[2],"state":0,"squareId":3},{"position":{"x":2.0,"y":1.0,"z":0.0},"isSpecialSquare":false,"targetSquare":{"instanceID":0},"isFinalSquare":false,"connections":[9,7],"state":0,"squareId":4},{"position":{"x":1.0,"y":2.0,"z":0.0},"isSpecialSquare":false,"targetSquare":{"instanceID":0},"isFinalSquare":false,"connections":[8,9],"state":0,"squareId":5},{"position":{"x":0.0,"y":0.0,"z":0.0},"isSpecialSquare":false,"targetSquare":{"instanceID":0},"isFinalSquare":false,"connections":[2,1],"state":0,"squareId":6},{"position":{"x":2.0,"y":0.0,"z":0.0},"isSpecialSquare":false,"targetSquare":{"instanceID":0},"isFinalSquare":false,"connections":[4,1],"state":0,"squareId":7},{"position":{"x":0.0,"y":2.0,"z":0.0},"isSpecialSquare":false,"targetSquare":{"instanceID":0},"isFinalSquare":false,"connections":[5],"state":0,"squareId":8},{"position":{"x":2.0,"y":2.0,"z":0.0},"isSpecialSquare":false,"targetSquare":{"instanceID":0},"isFinalSquare":false,"connections":[5,4],"state":0,"squareId":9}]},"playerData":{"state":0,"orientation":{"x":0.0,"y":0.0,"z":0.0},"currentTurn":{"instanceID":0},"entityItems":[],"initialSquare":3,"currentPosition":{"x":0.0,"y":0.0,"z":0.0},"isMoving":false,"playerAbilities":[]},"enemiesData":[{"state":0,"orientation":{"x":1.0,"y":0.0,"z":0.0},"currentTurn":{"instanceID":0},"entityItems":[],"initialSquare":8,"currentPosition":{"x":0.0,"y":0.0,"z":0.0},"isMoving":false,"enemyType":1}],"items":[]}'

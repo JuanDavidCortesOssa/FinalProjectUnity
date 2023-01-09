@@ -191,6 +191,7 @@ namespace ConquistaGO
             player.transform.position = new Vector3(playerInGamePosition.x, GameSettings.playerHeight, playerInGamePosition.z);
             //Debug.Log(player.playerData.camouflageAbility.state);
 
+            //CREATE ITEMS
             for (int i = 0; i < levelSO.level.items.Count; i++)
             {
                 Item.ItemData itemFromList = levelSO.level.items[i];
