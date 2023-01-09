@@ -12,6 +12,7 @@ public class UIManagerJ : Singleton<UIManagerJ>
     [SerializeField] private Button homeButton;
     [SerializeField] private Button restartButton;
     [SerializeField] private Button nextLevelButton;
+    [SerializeField] private string nextLevelName;
 
     private void Start()
     {
@@ -32,13 +33,13 @@ public class UIManagerJ : Singleton<UIManagerJ>
 
     public void ActivateWinCanvas()
     {
-        ToggleCanvas();
+        UICanvas.SetActive(true);
         winScreen.SetActive(true);
     }
 
     public void ActivateLoseCanvas()
     {
-        ToggleCanvas();
+        UICanvas.SetActive(true);
         loseScreen.SetActive(true);
     }
 
@@ -55,6 +56,6 @@ public class UIManagerJ : Singleton<UIManagerJ>
 
     private void NextLevelButtonFunc()
     {
-        //Needs to be implemented
+        SceneManager.LoadScene(nextLevelName);
     }
 }

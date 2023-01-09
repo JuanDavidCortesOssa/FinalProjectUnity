@@ -20,7 +20,7 @@ namespace ConquistaGO
             PlayerManager.Instance.gameObject.SetActive(false);
             yield return new WaitForSeconds(0.5f);
             UIManagerJ.Instance.ActivateLoseCanvas();
-            //Time.timeScale = 0;
+            Time.timeScale = 0;
             //yield return null;
         }
     }

@@ -71,6 +71,9 @@ namespace ConquistaGO
         /// <param name="positionRequested">The relative position of the square were the player wants to move</param>
         public void PlayerMovementRequest(Vector3 positionRequested)
         {
+            Debug.Log("Player state: " + playerManager.playerData.state);
+            if (playerManager.playerData.state == EntityData.State.Inactive) return;
+          
             int idActualPosition = levelManager.SquareReferencedId(playerManager.playerData.currentPosition);
             int idSolicitedPosition = levelManager.SquareReferencedId(positionRequested);
             WorldManager worldManager = WorldManager.Instance;

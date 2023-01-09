@@ -50,6 +50,9 @@ namespace ConquistaGO
         public void Kill(LevelManager levelManager)
         {
             Debug.Log("Player killed");
+            Debug.Log("Player state: " + playerData.state);
+            SetActive(false);
+            Debug.Log("Player state after kill: " + playerData.state);
             levelManager.SetState(new LoseState(levelManager));
         }
 

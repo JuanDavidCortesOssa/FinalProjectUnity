@@ -76,6 +76,11 @@ namespace ConquistaGO
 
         public PlayerManager player;
 
+        private void Awake()
+        {
+            Time.timeScale = 1;
+        }
+
         [Button]
         public void SetLevel()
         {
@@ -89,6 +94,7 @@ namespace ConquistaGO
 
             DestroyCurrentElements();
 
+            //CREATE SQUARES
             for (int i = 0; i < levelSO.level.board.squares.Count; i++)
             {
                 Square.SquareData squareFromList = levelSO.level.board.squares[i];
@@ -117,6 +123,7 @@ namespace ConquistaGO
                 squares.Add(squareObject);
             }
 
+            //CREATE CONNECTIONS
             for (int i = 0; i < levelSO.level.board.squares.Count; i++)
             {
                 for (int j = 0; j < levelSO.level.board.squares[i].connections.Count; j++)
@@ -137,6 +144,7 @@ namespace ConquistaGO
                 }
             }
 
+            //CREATE ENEMIES
             for (int i = 0; i < levelSO.level.enemiesData.Count; i++)
             {
                 Vector3 enemyRelativePosition = SquareReferencedPosition(levelSO.level.enemiesData[i].initialSquare);
@@ -170,6 +178,7 @@ namespace ConquistaGO
                 enemy.enemyData.currentPosition = enemyRelativePosition;
                 enemy.enemyData.state = EntityData.State.Inactive;
                 enemy.transform.position = new Vector3(enemyInGamePosition.x, GameSettings.enemyHeight, enemyInGamePosition.z);
+                enemy.transform.rotation = Quaternion.Euler(enemy.GetEnemyRotationAngle());
                 worldManager.worldData.enemies.Add(enemy);
             }
 
