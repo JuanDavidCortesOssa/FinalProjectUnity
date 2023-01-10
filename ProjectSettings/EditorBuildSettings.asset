@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/_Project/Scenes/UiJose/MainMenu.unity
     guid: a64fab9e0ef88054f9945701d5e8a288
   - enabled: 1
-    path: Assets/_Project/Scenes/Finals/Level1.unity
+    path: Assets/_Project/Scenes/Finals/Level2.unity
     guid: 344b429e46e98a34389144c4294b8cfb
   - enabled: 1
     path: Assets/_Project/Scenes/UiJose/PauseScene.unity

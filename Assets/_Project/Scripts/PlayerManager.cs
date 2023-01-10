@@ -32,7 +32,7 @@ namespace ConquistaGO
             public GoldThrowingAbility goldThrowingAbility = new GoldThrowingAbility();
             public CamouflageAbility camouflageAbility = new CamouflageAbility();
         }
-
+        public GameObject playerGO;
         public PlayerData playerData;
 
         /// <summary>
@@ -50,6 +50,9 @@ namespace ConquistaGO
         public void Kill(LevelManager levelManager)
         {
             Debug.Log("Player killed");
+            Debug.Log("Player state: " + playerData.state);
+            SetActive(false);
+            Debug.Log("Player state after kill: " + playerData.state);
             levelManager.SetState(new LoseState(levelManager));
         }
 
@@ -61,7 +64,7 @@ namespace ConquistaGO
         public void MovePlayer(Vector3 doMovePosition, Vector3 relativePosition)
         {
 
-            if (playerData.goldThrowingAbility.state != PlayerManager.PlayerData.Abilities.State.Available)
+            if (playerData.goldThrowingAbility.state != PlayerData.Abilities.State.Available)
             {
                 playerData.isMoving = true;
                 gameObject.transform.
@@ -73,16 +76,18 @@ namespace ConquistaGO
                     });
                 playerData.currentPosition = relativePosition;
 
+            }
+
                 if (playerData.camouflageAbility.state == PlayerData.Abilities.State.Available)
                 {
                     playerData.camouflageAbility.turnsAvailable--;
                     if (playerData.camouflageAbility.turnsAvailable == 0)
                     {
                         playerData.camouflageAbility.state = PlayerData.Abilities.State.Unavailable;
+                        CamouflagePlayer(false);
                         Debug.Log("Clamouflage lost");
                     }
                 }
-            }
         }
 
         /// <summary>
@@ -95,13 +100,30 @@ namespace ConquistaGO
         {
             item.itemData.currentSquare = newCurrentSquare;
             playerData.isMoving = true;
-
+            
             item.transform.DOMove(doMovePosition, GameSettings.movementAnimationDuration)
                     .OnComplete(
                     () =>
                     {
+                        StartCoroutine(item.GetComponent<GoldThrowingItem>().ActivateGoldRange());
                         playerData.isMoving = false;
                     });
+        }
+
+        /// <summary>
+        /// This method is called to activate or deactivate the player camouflage
+        /// </summary>
+        /// <param name="useCamouflage">true to activate the camouflage or false to deactivate it</param>
+        public void CamouflagePlayer(bool useCamouflage)
+        {
+            if (useCamouflage)
+            {
+                playerGO.SetActive(false);
+            }
+            else
+            {
+                playerGO.SetActive(true);
+            }
         }
 
         /// <summary>

@@ -29,9 +29,10 @@ namespace ConquistaGO
         /// </summary>
         public void DisableItem()
         {
-            this.gameObject.SetActive(false);
-            if (this.itemData.itemType == ItemData.ItemType.Camouflage)
+            gameObject.SetActive(false);
+            if (itemData.itemType == ItemData.ItemType.Camouflage)
             {
+                PlayerManager.Instance.CamouflagePlayer(true);
                 Debug.Log("Camouflage acquired");
             }
             itemData.currentSquare = 0;

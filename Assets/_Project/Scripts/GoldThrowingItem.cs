@@ -8,6 +8,8 @@ namespace ConquistaGO
     [System.Serializable]
     public class GoldThrowingItem : Item
     {
+        public GameObject rangeGO;
+
         /// <summary>
         /// this method attracts the enemies in a determined area around the gold 
         /// </summary>
@@ -29,6 +31,13 @@ namespace ConquistaGO
                     enemy.GetAttracted(square.squareData.squareId, levelManager);
                 }
             }
+        }
+
+        public IEnumerator ActivateGoldRange()
+        {
+            rangeGO.SetActive(true);
+            yield return new WaitForSeconds(1.5f);
+            rangeGO.SetActive(false);
         }
     }
 }

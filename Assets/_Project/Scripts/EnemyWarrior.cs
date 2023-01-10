@@ -91,6 +91,7 @@ namespace ConquistaGO
         /// <param name="player">the playerManager</param>
         public void RegularMovement(LevelManager levelManager, int idSolicitedPosition, int idActualPosition, Vector3 solicitedPosition, int playerSquareId, PlayerManager player)
         {
+            bool isNextConnected = false;
             if (idSolicitedPosition != 0)
             {
                 for (int i = 0; i < levelManager.squares.Count; i++)
@@ -111,8 +112,13 @@ namespace ConquistaGO
                                 {
                                     player.Kill(levelManager);
                                 }
+                                isNextConnected = true;
                                 break;
                             }
+                        }
+                        if (!isNextConnected)
+                        {
+                            ChangeDirection();
                         }
                     }
                 }

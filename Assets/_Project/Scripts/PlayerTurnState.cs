@@ -71,6 +71,9 @@ namespace ConquistaGO
         /// <param name="positionRequested">The relative position of the square were the player wants to move</param>
         public void PlayerMovementRequest(Vector3 positionRequested)
         {
+            Debug.Log("Player state: " + playerManager.playerData.state);
+            if (playerManager.playerData.state == EntityData.State.Inactive) return;
+          
             int idActualPosition = levelManager.SquareReferencedId(playerManager.playerData.currentPosition);
             int idSolicitedPosition = levelManager.SquareReferencedId(positionRequested);
             WorldManager worldManager = WorldManager.Instance;
@@ -105,6 +108,7 @@ namespace ConquistaGO
                                     case Item.ItemData.ItemType.Gold:
                                         playerManager.playerData.goldThrowingAbility.state = PlayerManager.PlayerData.Abilities.State.Available;
                                         playerManager.playerData.goldThrowingAbility.aimSquares = itemData.throwingSquares;
+                                        levelManager.ActivateGoldThrowingTargets();
                                         break;
                                     case Item.ItemData.ItemType.Camouflage:
                                         playerManager.playerData.camouflageAbility.state = PlayerManager.PlayerData.Abilities.State.Available;
@@ -211,6 +215,9 @@ namespace ConquistaGO
                                 int idActualPosition = levelManager.SquareReferencedId(playerManager.playerData.currentPosition);
                                 Item item = levelManager.GetItemById(idActualPosition);
                                 playerManager.ThrowItem(item, square.squareData.squareId, square.transform.position + new Vector3(0, levelManager.itemHeight, 0));
+                                // Here it will deactivate the targets
+                                levelManager.DectivateGoldThrowingTargets();
+                                
                                 item.GetComponent<GoldThrowingItem>().AttractEnemies(levelManager);
                                 playerManager.playerData.goldThrowingAbility.state = PlayerManager.PlayerData.Abilities.State.Unavailable;
                             }

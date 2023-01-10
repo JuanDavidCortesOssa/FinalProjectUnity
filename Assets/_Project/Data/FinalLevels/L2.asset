@@ -1,0 +1,226 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b4250f4cea8c744b8dfc784c815f50f, type: 3}
+  m_Name: L2
+  m_EditorClassIdentifier: 
+  level:
+    board:
+      squares:
+      - position: {x: 0, y: 0, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 0
+        connections: 0200000005000000
+        state: 0
+        squareId: 1
+        isVisited: 0
+      - position: {x: 1, y: 0, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 0
+        connections: 010000000600000003000000
+        state: 0
+        squareId: 2
+        isVisited: 0
+      - position: {x: 2, y: 0, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 0
+        connections: 0200000004000000
+        state: 0
+        squareId: 3
+        isVisited: 0
+      - position: {x: 3, y: 0, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 0
+        connections: 0300000008000000
+        state: 0
+        squareId: 4
+        isVisited: 0
+      - position: {x: 0, y: 1, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 0
+        connections: 0a0000000600000001000000
+        state: 0
+        squareId: 5
+        isVisited: 0
+      - position: {x: 1, y: 1, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 0
+        connections: 0b000000050000000200000007000000
+        state: 0
+        squareId: 6
+        isVisited: 0
+      - position: {x: 2, y: 1, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 0
+        connections: 060000000c00000008000000
+        state: 0
+        squareId: 7
+        isVisited: 0
+      - position: {x: 3, y: 1, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 0
+        connections: 070000000d00000004000000
+        state: 0
+        squareId: 8
+        isVisited: 0
+      - position: {x: 4, y: 1, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 1
+        connections: 0e000000
+        state: 0
+        squareId: 9
+        isVisited: 0
+      - position: {x: 0, y: 2, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 0
+        connections: 0f0000000b00000005000000
+        state: 0
+        squareId: 10
+        isVisited: 0
+      - position: {x: 1, y: 2, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 0
+        connections: 0a00000006000000100000000c000000
+        state: 0
+        squareId: 11
+        isVisited: 0
+      - position: {x: 2, y: 2, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 0
+        connections: 0b00000007000000
+        state: 0
+        squareId: 12
+        isVisited: 0
+      - position: {x: 3, y: 2, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 0
+        connections: 08000000120000000e000000
+        state: 0
+        squareId: 13
+        isVisited: 0
+      - position: {x: 4, y: 2, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 0
+        connections: 0d00000009000000
+        state: 0
+        squareId: 14
+        isVisited: 0
+      - position: {x: 0, y: 3, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 0
+        connections: 0a00000010000000
+        state: 0
+        squareId: 15
+        isVisited: 0
+      - position: {x: 1, y: 3, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 0
+        connections: 0f0000000b00000011000000
+        state: 0
+        squareId: 16
+        isVisited: 0
+      - position: {x: 2, y: 3, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 0
+        connections: 1000000012000000
+        state: 0
+        squareId: 17
+        isVisited: 0
+      - position: {x: 3, y: 3, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
+        isFinalSquare: 0
+        connections: 110000000d000000
+        state: 0
+        squareId: 18
+        isVisited: 0
+    playerData:
+      state: 0
+      orientation: {x: 0, y: 0, z: 0}
+      currentTurn: {fileID: 0}
+      entityItems: []
+      initialSquare: 15
+      currentPosition: {x: 0, y: 3, z: 0}
+      isMoving: 0
+    enemiesData:
+    - state: 1
+      orientation: {x: 0, y: 1, z: 0}
+      currentTurn: {fileID: 0}
+      entityItems: []
+      initialSquare: 6
+      currentPosition: {x: 1, y: 1, z: 0}
+      isMoving: 0
+      enemyType: 2
+      goldAttractionPath: []
+    - state: 1
+      orientation: {x: -1, y: 0, z: 0}
+      currentTurn: {fileID: 0}
+      entityItems: []
+      initialSquare: 7
+      currentPosition: {x: 2, y: 1, z: 0}
+      isMoving: 0
+      enemyType: 2
+      goldAttractionPath: []
+    - state: 1
+      orientation: {x: 0, y: 1, z: 0}
+      currentTurn: {fileID: 0}
+      entityItems: []
+      initialSquare: 8
+      currentPosition: {x: 3, y: 1, z: 0}
+      isMoving: 0
+      enemyType: 2
+      goldAttractionPath: []
+    - state: 1
+      orientation: {x: 0, y: 1, z: 0}
+      currentTurn: {fileID: 0}
+      entityItems: []
+      initialSquare: 11
+      currentPosition: {x: 1, y: 2, z: 0}
+      isMoving: 0
+      enemyType: 2
+      goldAttractionPath: []
+    - state: 1
+      orientation: {x: -1, y: 0, z: 0}
+      currentTurn: {fileID: 0}
+      entityItems: []
+      initialSquare: 12
+      currentPosition: {x: 2, y: 2, z: 0}
+      isMoving: 0
+      enemyType: 2
+      goldAttractionPath: []
+    - state: 1
+      orientation: {x: 0, y: -1, z: 0}
+      currentTurn: {fileID: 0}
+      entityItems: []
+      initialSquare: 18
+      currentPosition: {x: 3, y: 3, z: 0}
+      isMoving: 0
+      enemyType: 2
+      goldAttractionPath: []
+    items: []
+  jSon: 

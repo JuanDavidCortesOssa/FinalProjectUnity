@@ -22,10 +22,10 @@ namespace ConquistaGO
         /// </summary>
         public void Kill()
         {
-            this.enemyData.currentPosition = new Vector3(-1, -1, -1);
+            enemyData.currentPosition = new Vector3(-1, -1, -1);
             enemyData.orientation = new Vector3(0, 0, 0);
             Debug.Log("Enemy killed");
-            this.gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
 
         /// <summary>
