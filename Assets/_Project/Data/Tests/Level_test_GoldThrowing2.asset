@@ -74,7 +74,7 @@ MonoBehaviour:
       - position: {x: 0, y: 2, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
-        isFinalSquare: 0
+        isFinalSquare: 1
         connections: 05000000
         state: 0
         squareId: 8
