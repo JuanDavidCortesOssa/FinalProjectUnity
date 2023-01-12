@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(AudioSource))]
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] private AudioClip music;
+    //Add the different audiosource
+    public AudioSource soundMusic;
+    public AudioSource soundSfx;
 
-    private AudioSource sound;
+    //Add the different sounds
+    [SerializeField] private AudioClip music;
 
     public static AudioManager instance;
 
@@ -24,11 +26,12 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        sound = GetComponent<AudioSource>();
+        soundMusic = GetComponent<AudioSource>();
+        soundSfx = GetComponent<AudioSource>();
     }
 
     public void PlaySecondSound()
     {
-        sound.PlayOneShot(music);
+        soundMusic.PlayOneShot(music);
     }
 }
