@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 namespace ConquistaGO
@@ -62,6 +63,36 @@ namespace ConquistaGO
             if (Input.GetMouseButtonDown(0))
             {
                 PlayerGoldThrowingMove();
+            }
+
+            if (Input.GetMouseButton(0))
+            {
+                float XAxis = Math.Abs(Input.GetAxis("Mouse X"));
+                float YAxis = Math.Abs(Input.GetAxis("Mouse Y"));
+
+                if (YAxis > XAxis)
+                {
+                    if (Input.GetAxis("Mouse Y") > 0)
+                    {
+                        PlayerMovementRequest(playerManager.playerData.currentPosition + new Vector3(0, 1));
+                    }
+                    else if (Input.GetAxis("Mouse Y") < 0)
+                    {
+                        PlayerMovementRequest(playerManager.playerData.currentPosition + new Vector3(0, -1));
+                    }
+
+                }
+                else
+                {
+                    if (Input.GetAxis("Mouse X") > 0)
+                    {
+                        PlayerMovementRequest(playerManager.playerData.currentPosition + new Vector3(1, 0));
+                    }
+                    else if (Input.GetAxis("Mouse Y") < 0)
+                    {
+                        PlayerMovementRequest(playerManager.playerData.currentPosition + new Vector3(-1, 0));
+                    }
+                }
             }
         }
 
