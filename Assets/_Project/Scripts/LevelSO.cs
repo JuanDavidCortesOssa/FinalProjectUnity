@@ -35,21 +35,22 @@ namespace ConquistaGO
 
         public LevelSnapshot level;
 
-        [BoxGroup("Json")]
-        [TextArea]
-        public string jSon;
-        [BoxGroup("Json")]
-        [Button]
-        public void SerializeJson()
-        {
-            jSon = JsonUtility.ToJson(level);
-        }
-        [BoxGroup("Json")]
-        [Button]
-        public void DeSerializeJson()
-        {
-            level = JsonUtility.FromJson<LevelSnapshot>(jSon);
-            EditorUtility.SetDirty(this);
-        }
+        //[BoxGroup("Json")]
+        //[TextArea]
+        //public string jSon;
+        //[BoxGroup("Json")]
+        //[Button]
+        //public void SerializeJson()
+        //{
+        //    jSon = JsonUtility.ToJson(level);
+        //}
+        //[BoxGroup("Json")]
+        //[Button]
+        //public void DeSerializeJson()
+        //{
+        //    level = JsonUtility.FromJson<LevelSnapshot>(jSon);
+        //    EditorUtility.SetDirty(this);
+        //}
     }
+
 }

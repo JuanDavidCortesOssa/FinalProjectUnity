@@ -1138,7 +1138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3175549122965582409
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4295,8 +4295,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 877a1f5d8ee80da418a0a3aee48fd6cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winScreen: {fileID: 8532086082141052905}
-  loseScreen: {fileID: 2918595267095235334}
+  winScreen: {fileID: 2918595267095235334}
+  loseScreen: {fileID: 4466234410687085988}
 --- !u!1 &8532086082547411335
 GameObject:
   m_ObjectHideFlags: 0

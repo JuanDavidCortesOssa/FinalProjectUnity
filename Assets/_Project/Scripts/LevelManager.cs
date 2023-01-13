@@ -81,6 +81,7 @@ namespace ConquistaGO
             Time.timeScale = 1;
         }
 
+#if UNITY_EDITOR
         [Button]
         public void SetLevel()
         {
@@ -215,6 +216,7 @@ namespace ConquistaGO
                 worldManager.GetComponent<WorldManager>().worldData.items.Add(item);
             }
         }
+#endif
 
         /// <summary>
         /// This method checks if a connection has already been set on the board
