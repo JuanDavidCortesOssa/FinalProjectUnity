@@ -6,6 +6,7 @@ namespace ConquistaGO
 {
     public class LoseState : State
     {
+        [SerializeField] GameObject panelLost;
         public LoseState(LevelManager levelManager) : base(levelManager)
         {
         }

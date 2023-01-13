@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public Toggle toggle;
+    private int gameMode;
 
     private void Start()
     {
@@ -23,16 +24,6 @@ public class GameManager : MonoBehaviour
     public void LoadScene(int scene)
     {
         SceneManager.LoadScene(scene);
-    }
-
-    public void PauseScene()
-    {
-        Time.timeScale = 0f;
-    }
-
-    public void ResumeScene()
-    {
-        Time.timeScale = 1f;
     }
 
     public void RestartScene()
@@ -55,5 +46,10 @@ public class GameManager : MonoBehaviour
     public void ActivateFullScreen(bool fullScreen)
     {
         Screen.fullScreen = fullScreen;
+    }
+
+    public void SetGameMode(int gameMode)
+    {
+        PlayerPrefs.SetInt("GameMode", gameMode);
     }
 }

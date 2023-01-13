@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class ActivePause : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject panelPause;
+    public bool paused;
+
+    private void Update()
     {
-        
+        if(Input.GetKey(KeyCode.Escape))
+        {
+            ChangePaused();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ChangePaused()
     {
-        
+        if(!paused)
+        {
+            paused = true;
+            panelPause.SetActive(true);
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            paused = false;
+            panelPause.SetActive(false);
+            Time.timeScale = 1.0f;
+        }
     }
 }

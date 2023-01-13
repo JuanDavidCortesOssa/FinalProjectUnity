@@ -12,11 +12,8 @@ public class VolumeController : MonoBehaviour
 
     private void Start()
     {
-        //aud = GameObject.FindGameObjectWithTag("audio");
         audioMusic = GameObject.FindGameObjectWithTag("AudioMusic");
-        //audioMusic = AudioManager.instance.soundMusic.GetComponent<AudioSource>();
         audioSfx = GameObject.FindGameObjectWithTag("AudioSfx");
-        //audioSfx = AudioManager.instance.soundSfx.GetComponent<AudioSource>();
         volumeControllerMusic.value = PlayerPrefs.GetFloat("volumeMusic", 1f);
         volumeControllerSfx.value = PlayerPrefs.GetFloat("volumeSfx", 1f);
     }
@@ -25,8 +22,6 @@ public class VolumeController : MonoBehaviour
     {
         audioMusic.GetComponent<AudioSource>().volume = volumeControllerMusic.value;
         audioSfx.GetComponent<AudioSource>().volume = volumeControllerSfx.value;
-        /*audioMusic.volume = volumeControllerMusic.value;
-        audioSfx.volume = volumeControllerSfx.value;*/
     }
 
     public void SaveVolumeMusic()
