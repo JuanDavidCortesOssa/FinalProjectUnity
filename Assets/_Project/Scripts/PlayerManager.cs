@@ -32,7 +32,8 @@ namespace ConquistaGO
             public GoldThrowingAbility goldThrowingAbility = new GoldThrowingAbility();
             public CamouflageAbility camouflageAbility = new CamouflageAbility();
         }
-        public GameObject playerGO;
+        public GameObject pirateGO;
+        public GameObject barrelGO;
         public PlayerData playerData;
 
         /// <summary>
@@ -118,11 +119,13 @@ namespace ConquistaGO
         {
             if (useCamouflage)
             {
-                playerGO.SetActive(false);
+                pirateGO.SetActive(false);
+                barrelGO.SetActive(true);
             }
             else
             {
-                playerGO.SetActive(true);
+                pirateGO.SetActive(true);
+                barrelGO.SetActive(false);
             }
         }
 
