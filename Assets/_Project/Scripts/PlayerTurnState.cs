@@ -63,6 +63,7 @@ namespace ConquistaGO
             if (Input.GetMouseButtonDown(0))
             {
                 PlayerGoldThrowingMove();
+                SpecialSquareMouseInput();
             }
 
             if (Input.GetMouseButton(0))
@@ -182,38 +183,38 @@ namespace ConquistaGO
                 int movePositionId = levelManager.SquareReferencedId(movePosition);
                 playerManager.MovePlayer(levelManager.ToGamePosition(movePosition) + new Vector3(0f, GameSettings.playerHeight, 0f), movePosition);
 
-                List<int> enemiesPositions = levelManager.IdEnemiesPositions();
+                //List<int> enemiesPositions = levelManager.IdEnemiesPositions();
 
-                for (int i = 0; i < enemiesPositions.Count; i++)
-                {
-                    if (enemiesPositions[i] == movePositionId)
-                    {
-                        worldManager.worldData.enemies[i].Kill();
-                    }
-                }
+                //for (int i = 0; i < enemiesPositions.Count; i++)
+                //{
+                //    if (enemiesPositions[i] == movePositionId)
+                //    {
+                //        worldManager.worldData.enemies[i].Kill();
+                //    }
+                //}
 
-                for (int i = 0; i < worldManager.worldData.items.Count; i++)
-                {
-                    Item item = worldManager.worldData.items[i];
-                    Item.ItemData itemData = item.itemData;
-                    if (itemData.currentSquare == movePositionId)
-                    {
-                        switch (itemData.itemType)
-                        {
-                            case Item.ItemData.ItemType.Gold:
-                                playerManager.playerData.goldThrowingAbility.state = PlayerManager.PlayerData.Abilities.State.Available;
-                                playerManager.playerData.goldThrowingAbility.aimSquares = itemData.throwingSquares;
-                                break;
-                            case Item.ItemData.ItemType.Camouflage:
-                                playerManager.playerData.camouflageAbility.turnsAvailable = 4;
-                                playerManager.playerData.camouflageAbility.state = PlayerManager.PlayerData.Abilities.State.Available;
-                                break;
-                            default:
-                                break;
-                        }
-                        item.DisableItem();
-                    }
-                }
+                //for (int i = 0; i < worldManager.worldData.items.Count; i++)
+                //{
+                //    Item item = worldManager.worldData.items[i];
+                //    Item.ItemData itemData = item.itemData;
+                //    if (itemData.currentSquare == movePositionId)
+                //    {
+                //        switch (itemData.itemType)
+                //        {
+                //            case Item.ItemData.ItemType.Gold:
+                //                playerManager.playerData.goldThrowingAbility.state = PlayerManager.PlayerData.Abilities.State.Available;
+                //                playerManager.playerData.goldThrowingAbility.aimSquares = itemData.throwingSquares;
+                //                break;
+                //            case Item.ItemData.ItemType.Camouflage:
+                //                playerManager.playerData.camouflageAbility.turnsAvailable = 4;
+                //                playerManager.playerData.camouflageAbility.state = PlayerManager.PlayerData.Abilities.State.Available;
+                //                break;
+                //            default:
+                //                break;
+                //        }
+                //        item.DisableItem();
+                //    }
+                //}
             }
             else
             {
@@ -258,5 +259,33 @@ namespace ConquistaGO
             }
         }
 
+        public void SpecialSquareMouseInput()
+        {
+            WorldManager worldManager = WorldManager.Instance;
+            int idActualPosition = levelManager.SquareReferencedId(playerManager.playerData.currentPosition);
+            Square currentSquare = levelManager.SquareReferenced(idActualPosition);
+
+            if (currentSquare.squareData.isSpecialSquare)
+            {
+                RaycastHit info;
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+                if (Physics.Raycast(ray, out info, 100f))
+                {
+                    if (info.transform != null && info.transform.GetComponent<Square>() != null)
+                    {
+                        Square pressedSquare = info.transform.GetComponent<Square>();
+                        if (pressedSquare.squareData.isSpecialSquare && pressedSquare != currentSquare)
+                        {
+                            Debug.Log("Player: " + playerManager.playerData.currentPosition + "Square: " + pressedSquare.squareData.position);
+                            //PlayerSpecialSquareMove();
+                            Square targetSquare = levelManager.SquareReferenced(pressedSquare.squareData.squareId);
+                            Vector3 movePosition = targetSquare.squareData.position;
+                            playerManager.MovePlayer(levelManager.ToGamePosition(movePosition) + new Vector3(0f, GameSettings.playerHeight, 0f), movePosition);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
