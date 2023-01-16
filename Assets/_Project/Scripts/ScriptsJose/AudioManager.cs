@@ -27,17 +27,12 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    private void Start()
-    {
-        soundMusic = GetComponent<AudioSource>();
-        soundSfx = GetComponent<AudioSource>();
-    }
-
     public void PlaySecondSound()
     {
         soundMusic.PlayOneShot(music);
     }
-
+    
+    [ContextMenu("PlayMove")]
     public void PlayMoveSfx()
     {
         soundSfx.PlayOneShot(moveSfx);
