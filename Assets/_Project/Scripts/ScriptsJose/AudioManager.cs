@@ -11,6 +11,9 @@ public class AudioManager : MonoBehaviour
 
     //Add the different sounds
     [SerializeField] private AudioClip music;
+    [SerializeField] private AudioClip moveSfx;
+    [SerializeField] private AudioClip victorySfx;
+    [SerializeField] private AudioClip attackSfx;
 
     public static AudioManager instance;
 
@@ -33,5 +36,20 @@ public class AudioManager : MonoBehaviour
     public void PlaySecondSound()
     {
         soundMusic.PlayOneShot(music);
+    }
+
+    public void PlayMoveSfx()
+    {
+        soundSfx.PlayOneShot(moveSfx);
+    }
+
+    public void PlayVictorySfx()
+    {
+        soundSfx.PlayOneShot(victorySfx);
+    }
+
+    public void PlayAttackSfx()
+    {
+        soundSfx.PlayOneShot(attackSfx);
     }
 }
