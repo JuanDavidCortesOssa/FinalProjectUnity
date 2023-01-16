@@ -34,6 +34,7 @@ namespace ConquistaGO
         }
         public GameObject pirateGO;
         public GameObject barrelGO;
+        public bool isPlayerOnSpecialSquare = false;
         public PlayerData playerData;
 
         /// <summary>

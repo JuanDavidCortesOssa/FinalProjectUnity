@@ -307,7 +307,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6325140325349829259}
   m_LocalRotation: {x: -0, y: 0.62156594, z: -0, w: 0.78336185}
-  m_LocalPosition: {x: -0.003487, y: -0.8, z: -0.0059715}
+  m_LocalPosition: {x: -0.003487, y: -0.72, z: -0.0059715}
   m_LocalScale: {x: 1.2563, y: 1.2563, z: 1.2563}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -431,6 +431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pirateGO: {fileID: 3695062988542363274}
   barrelGO: {fileID: 7693774471329460472}
+  isPlayerOnSpecialSquare: 0
   playerData:
     state: 0
     orientation: {x: 0, y: 0, z: 0}

@@ -241,7 +241,7 @@ namespace ConquistaGO
                 {
                     if (square.squareData.squareId == goldThrowingSquares[j])
                     {
-                        square.SetGoldTargetActive(true);
+                        square.SetTargetActive(true);
                     }
                 }
             }
@@ -251,14 +251,14 @@ namespace ConquistaGO
         /// This method deactivates the GoldThrowingTargets
         /// </summary>
         /// <param name="levelManager"></param>
-        public void DectivateGoldThrowingTargets()
+        public void DectivateTargets()
         {
             for (int i = 0; i < squares.Count; i++)
             {
                 Square square = squares[i].GetComponent<Square>();
                 if (square.goldThrowingTargetGO.activeSelf)
                 {
-                    square.SetGoldTargetActive(false);
+                    square.SetTargetActive(false);
                 }
             }
         }
