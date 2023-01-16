@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LoadLevelManager : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class LoadLevelManager : MonoBehaviour
     private int gameMode;
     private int difficultyLevel = 0;
     public bool nextLevelLoad = false;
-    private int levelLoad;
+    private int levelLoad = 1;
 
     private void Awake()
     {
@@ -33,7 +34,7 @@ public class LoadLevelManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("Modo normal");
+                LoadNextLevel();
             }
         }
     }
@@ -53,22 +54,37 @@ public class LoadLevelManager : MonoBehaviour
         switch (difficultyLevel)
         {
             case 1:
-                levelLoad = Random.Range(2, 4);
-                Debug.Log(levelLoad);
+                levelLoad = Random.Range(1, 3);
+                SceneManager.LoadScene(levelLoad);
                 break;
             case 2:
-                levelLoad = Random.Range(4, 6);
-                Debug.Log(levelLoad);
+                levelLoad = Random.Range(3, 6);
+                SceneManager.LoadScene(levelLoad);
                 break;
             case 3:
-                levelLoad = Random.Range(6, 8);
-                Debug.Log(levelLoad);
-                break;
-            case 4:
-                levelLoad = 8;
-                Debug.Log(levelLoad);
+                levelLoad = 6;
+                SceneManager.LoadScene(levelLoad);
                 difficultyLevel = 0;
+                RestartLevel();
                 break;
         }
+    }
+
+    public void RestartLevel()
+    {
+        levelLoad = 1;
+    }
+
+    private void LoadNextLevel()
+    {
+        SceneManager.LoadScene(levelLoad);
+        levelLoad++;
+    }
+
+    public void RestartGame()
+    {
+        levelLoad = 1;
+        difficultyLevel = 0;
+        nextLevelLoad = false;
     }
 }

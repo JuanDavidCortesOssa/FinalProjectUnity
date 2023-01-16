@@ -24,7 +24,13 @@ public class GameManager : MonoBehaviour
     public void SetGameMode(int gameMode)
     {
         PlayerPrefs.SetInt("GameMode", gameMode);
+        LoadLevelManager.instance.RestartLevel();
         LoadLevelManager.instance.GetGameMode();
+        LoadLevelManager.instance.ActivateNextLevel();
+    }
+
+    public void NextLevel()
+    {
         LoadLevelManager.instance.ActivateNextLevel();
     }
 
@@ -53,5 +59,11 @@ public class GameManager : MonoBehaviour
     public void ActivateFullScreen(bool fullScreen)
     {
         Screen.fullScreen = fullScreen;
+    }
+
+    public void RestartAll()
+    {
+        LoadLevelManager.instance.RestartGame();
+        LoadLevelManager.instance.ActivateNextLevel();
     }
 }
