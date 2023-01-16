@@ -113,14 +113,14 @@ namespace ConquistaGO
             if (idSolicitedPosition != 0)
             {
                 Square.SquareData actualSquare = levelManager.SquareReferenced(idActualPosition).squareData;
-
+                
                 for (int j = 0; j < actualSquare.connections.Count; j++)
                 {
                     if (actualSquare.connections[j] == idSolicitedPosition)
                     {
                         List<int> enemiesSquares = levelManager.IdEnemiesPositions();
                         playerManager.MovePlayer(levelManager.ToGamePosition(positionRequested) + new Vector3(0f, GameSettings.playerHeight, 0f), positionRequested);
-
+                        StepSpecialSquare();
                         for (int i = 0; i < enemiesSquares.Count; i++)
                         {
                             if (enemiesSquares[i] == idSolicitedPosition)
@@ -182,6 +182,7 @@ namespace ConquistaGO
                 Vector3 movePosition = targetSquare.squareData.position;
                 int movePositionId = levelManager.SquareReferencedId(movePosition);
                 playerManager.MovePlayer(levelManager.ToGamePosition(movePosition) + new Vector3(0f, GameSettings.playerHeight, 0f), movePosition);
+                targetSquare.SetTargetActive(false);
 
                 //List<int> enemiesPositions = levelManager.IdEnemiesPositions();
 
@@ -222,6 +223,54 @@ namespace ConquistaGO
             }
         }
 
+        public void SpecialSquareMouseInput()
+        {
+            WorldManager worldManager = WorldManager.Instance;
+            int idActualPosition = levelManager.SquareReferencedId(playerManager.playerData.currentPosition);
+            Square currentSquare = levelManager.SquareReferenced(idActualPosition);
+
+            if (currentSquare.squareData.isSpecialSquare)
+            {
+                RaycastHit info;
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+                if (Physics.Raycast(ray, out info, 100f))
+                {
+                    if (info.transform != null && info.transform.GetComponent<Square>() != null)
+                    {
+                        Square pressedSquare = info.transform.GetComponent<Square>();
+                        if (pressedSquare.squareData.isSpecialSquare && pressedSquare != currentSquare)
+                        {
+                            Debug.Log("Player: " + playerManager.playerData.currentPosition + "Square: " + pressedSquare.squareData.position);
+                            //PlayerSpecialSquareMove();
+                            Square targetSquare = levelManager.SquareReferenced(pressedSquare.squareData.squareId);
+                            targetSquare.SetTargetActive(false);
+                            Vector3 movePosition = targetSquare.squareData.position;
+                            playerManager.MovePlayer(levelManager.ToGamePosition(movePosition) + new Vector3(0f, GameSettings.playerHeight, 0f), movePosition);
+                        }
+                    }
+                }
+            }
+        }
+
+        public void StepSpecialSquare()
+        {
+            int idActualPosition = levelManager.SquareReferencedId(playerManager.playerData.currentPosition);
+            Square square = levelManager.SquareReferenced(idActualPosition);
+
+            if (!playerManager.isPlayerOnSpecialSquare && square.squareData.isSpecialSquare)
+            {
+                playerManager.isPlayerOnSpecialSquare = true;
+                Square targetSquare = levelManager.SquareReferenced(square.squareData.targetSquare);
+                targetSquare.SetTargetActive(true);
+            }
+            else
+            {
+                levelManager.DectivateTargets();
+                playerManager.isPlayerOnSpecialSquare = false;
+            }
+        }
+
         /// <summary>
         /// This method contains the logic for the goldThrowing interaction
         /// </summary>
@@ -248,40 +297,11 @@ namespace ConquistaGO
                                 Item item = levelManager.GetItemById(idActualPosition);
                                 playerManager.ThrowItem(item, square.squareData.squareId, square.transform.position + new Vector3(0, levelManager.itemHeight, 0));
                                 // Here it will deactivate the targets
-                                levelManager.DectivateGoldThrowingTargets();
+                                levelManager.DectivateTargets();
                                 
                                 item.GetComponent<GoldThrowingItem>().AttractEnemies(levelManager);
                                 playerManager.playerData.goldThrowingAbility.state = PlayerManager.PlayerData.Abilities.State.Unavailable;
                             }
-                        }
-                    }
-                }
-            }
-        }
-
-        public void SpecialSquareMouseInput()
-        {
-            WorldManager worldManager = WorldManager.Instance;
-            int idActualPosition = levelManager.SquareReferencedId(playerManager.playerData.currentPosition);
-            Square currentSquare = levelManager.SquareReferenced(idActualPosition);
-
-            if (currentSquare.squareData.isSpecialSquare)
-            {
-                RaycastHit info;
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-                if (Physics.Raycast(ray, out info, 100f))
-                {
-                    if (info.transform != null && info.transform.GetComponent<Square>() != null)
-                    {
-                        Square pressedSquare = info.transform.GetComponent<Square>();
-                        if (pressedSquare.squareData.isSpecialSquare && pressedSquare != currentSquare)
-                        {
-                            Debug.Log("Player: " + playerManager.playerData.currentPosition + "Square: " + pressedSquare.squareData.position);
-                            //PlayerSpecialSquareMove();
-                            Square targetSquare = levelManager.SquareReferenced(pressedSquare.squareData.squareId);
-                            Vector3 movePosition = targetSquare.squareData.position;
-                            playerManager.MovePlayer(levelManager.ToGamePosition(movePosition) + new Vector3(0f, GameSettings.playerHeight, 0f), movePosition);
                         }
                     }
                 }

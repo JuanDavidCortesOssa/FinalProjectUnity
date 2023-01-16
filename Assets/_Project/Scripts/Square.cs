@@ -31,7 +31,7 @@ namespace ConquistaGO
         public GameObject goldThrowingTargetGO;
         public SquareData squareData = new SquareData();
 
-        public void SetGoldTargetActive(bool setActive)
+        public void SetTargetActive(bool setActive)
         {
             goldThrowingTargetGO.SetActive(setActive);
     }
