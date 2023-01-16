@@ -65,14 +65,9 @@ public class LoadLevelManager : MonoBehaviour
                 levelLoad = 6;
                 SceneManager.LoadScene(levelLoad);
                 difficultyLevel = 0;
-                RestartLevel();
+                RestartGame();
                 break;
         }
-    }
-
-    public void RestartLevel()
-    {
-        levelLoad = 1;
     }
 
     private void LoadNextLevel()

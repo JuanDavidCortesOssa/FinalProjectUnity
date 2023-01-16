@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     public void SetGameMode(int gameMode)
     {
         PlayerPrefs.SetInt("GameMode", gameMode);
-        LoadLevelManager.instance.RestartLevel();
+        LoadLevelManager.instance.RestartGame();
         LoadLevelManager.instance.GetGameMode();
         LoadLevelManager.instance.ActivateNextLevel();
     }
