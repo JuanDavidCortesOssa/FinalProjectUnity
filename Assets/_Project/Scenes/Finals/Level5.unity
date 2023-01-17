@@ -1316,6 +1316,26 @@ PrefabInstance:
       propertyPath: squareData.connections.Array.data[0]
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 7256252922714765785, guid: a8777841412ca1342a1831fa18ed0ea1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256252922714765785, guid: a8777841412ca1342a1831fa18ed0ea1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256252922714765785, guid: a8777841412ca1342a1831fa18ed0ea1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.73127455
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256252922714765785, guid: a8777841412ca1342a1831fa18ed0ea1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.68208325
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256252922714765785, guid: a8777841412ca1342a1831fa18ed0ea1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -86.013
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8777841412ca1342a1831fa18ed0ea1, type: 3}
 --- !u!4 &367967131 stripped

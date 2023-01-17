@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06f16ad74e675454f8c17ab2bd8234b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goldThrowingTargetGO: {fileID: 7807799248491159907}
+  targetGO: {fileID: 7807799248491159907}
   squareData:
     position: {x: 0, y: 0, z: 0}
     isSpecialSquare: 0
