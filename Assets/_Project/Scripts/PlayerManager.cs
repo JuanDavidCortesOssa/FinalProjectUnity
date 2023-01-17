@@ -36,7 +36,12 @@ namespace ConquistaGO
         public GameObject barrelGO;
         public bool isPlayerOnSpecialSquare = false;
         public PlayerData playerData;
-        private AudioManager audioManager = AudioManager.instance; 
+        private AudioManager audioManager;
+
+        private void Start()
+        {
+            audioManager = AudioManager.instance;
+        }
 
         /// <summary>
         /// This method changes the state parameter of the player
