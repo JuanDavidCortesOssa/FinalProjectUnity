@@ -28,12 +28,12 @@ namespace ConquistaGO
             public bool isVisited = false;
         }
 
-        public GameObject goldThrowingTargetGO;
+        public GameObject targetGO;
         public SquareData squareData = new SquareData();
 
-        public void SetGoldTargetActive(bool setActive)
+        public void SetTargetActive(bool setActive)
         {
-            goldThrowingTargetGO.SetActive(setActive);
+            targetGO.SetActive(setActive);
     }
     }
 }

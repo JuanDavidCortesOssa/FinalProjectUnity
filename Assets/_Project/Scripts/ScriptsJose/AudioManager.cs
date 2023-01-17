@@ -11,6 +11,9 @@ public class AudioManager : MonoBehaviour
 
     //Add the different sounds
     [SerializeField] private AudioClip music;
+    [SerializeField] private AudioClip moveSfx;
+    [SerializeField] private AudioClip victorySfx;
+    [SerializeField] private AudioClip attackSfx;
 
     public static AudioManager instance;
 
@@ -24,14 +27,24 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    private void Start()
-    {
-        soundMusic = GetComponent<AudioSource>();
-        soundSfx = GetComponent<AudioSource>();
-    }
-
     public void PlaySecondSound()
     {
         soundMusic.PlayOneShot(music);
+    }
+    
+    [ContextMenu("PlayMove")]
+    public void PlayMoveSfx()
+    {
+        soundSfx.PlayOneShot(moveSfx);
+    }
+
+    public void PlayVictorySfx()
+    {
+        soundSfx.PlayOneShot(victorySfx);
+    }
+
+    public void PlayAttackSfx()
+    {
+        soundSfx.PlayOneShot(attackSfx);
     }
 }

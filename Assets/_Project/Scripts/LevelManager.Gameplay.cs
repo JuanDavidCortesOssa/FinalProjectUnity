@@ -241,7 +241,7 @@ namespace ConquistaGO
                 {
                     if (square.squareData.squareId == goldThrowingSquares[j])
                     {
-                        square.SetGoldTargetActive(true);
+                        square.SetTargetActive(true);
                     }
                 }
             }
@@ -256,9 +256,21 @@ namespace ConquistaGO
             for (int i = 0; i < squares.Count; i++)
             {
                 Square square = squares[i].GetComponent<Square>();
-                if (square.goldThrowingTargetGO.activeSelf)
+                if (square.targetGO.activeSelf)
                 {
-                    square.SetGoldTargetActive(false);
+                    square.SetTargetActive(false);
+                }
+            }
+        }
+
+        public void DectivateSpecialSquareTargets()
+        {
+            for (int i = 0; i < squares.Count; i++)
+            {
+                Square square = squares[i].GetComponent<Square>();
+                if (square.squareData.isSpecialSquare)
+                {
+                    square.SetTargetActive(false);
                 }
             }
         }

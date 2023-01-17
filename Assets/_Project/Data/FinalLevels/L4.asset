@@ -67,7 +67,7 @@ MonoBehaviour:
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 0
-        connections: 0700000008000000
+        connections: 0500000008000000
         state: 0
         squareId: 7
         isVisited: 0
@@ -118,4 +118,3 @@ MonoBehaviour:
       currentSquare: 7
       initialSquare: 7
       throwingSquares: 
-  jSon: 

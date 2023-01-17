@@ -17,6 +17,7 @@ namespace ConquistaGO
         public override IEnumerator Start()
         {
             Debug.Log("Win");
+            AudioManager.instance.PlayVictorySfx();
             PlayerManager.Instance.SetActive(false);
             yield return new WaitForSeconds(0.5f);
             UIManagerJ.Instance.ActivateWinCanvas();

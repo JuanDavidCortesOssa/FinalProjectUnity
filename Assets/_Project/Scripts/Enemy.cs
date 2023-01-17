@@ -14,6 +14,7 @@ namespace ConquistaGO
             public List<Vector3> goldAttractionPath = new List<Vector3>();
         }
         public EnemyData enemyData = new EnemyData();
+        private AudioManager audioManager = AudioManager.instance;
 
         public virtual void OnTurn(LevelManager levelManager) { }
 
@@ -24,6 +25,7 @@ namespace ConquistaGO
         {
             enemyData.currentPosition = new Vector3(-1, -1, -1);
             enemyData.orientation = new Vector3(0, 0, 0);
+            audioManager.PlayAttackSfx();
             Debug.Log("Enemy killed");
             gameObject.SetActive(false);
         }

@@ -34,7 +34,9 @@ namespace ConquistaGO
         }
         public GameObject pirateGO;
         public GameObject barrelGO;
+        public bool isPlayerOnSpecialSquare = false;
         public PlayerData playerData;
+        private AudioManager audioManager = AudioManager.instance; 
 
         /// <summary>
         /// This method changes the state parameter of the player
@@ -50,6 +52,7 @@ namespace ConquistaGO
         /// </summary>
         public void Kill(LevelManager levelManager)
         {
+            audioManager.PlayAttackSfx();
             Debug.Log("Player killed");
             Debug.Log("Player state: " + playerData.state);
             SetActive(false);
@@ -64,7 +67,6 @@ namespace ConquistaGO
         /// <param name="relativePosition">The position relative to the board where the player will be located</param>
         public void MovePlayer(Vector3 doMovePosition, Vector3 relativePosition)
         {
-
             if (playerData.goldThrowingAbility.state != PlayerData.Abilities.State.Available)
             {
                 playerData.isMoving = true;
@@ -76,8 +78,8 @@ namespace ConquistaGO
                         playerData.isMoving = false;
                     });
                 playerData.currentPosition = relativePosition;
-
             }
+            audioManager.PlayMoveSfx();
 
                 if (playerData.camouflageAbility.state == PlayerData.Abilities.State.Available)
                 {
