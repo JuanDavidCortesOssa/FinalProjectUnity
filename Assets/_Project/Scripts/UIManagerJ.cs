@@ -1,3 +1,4 @@
+using ConquistaGO;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,8 +9,12 @@ public class UIManagerJ : Singleton<UIManagerJ>
 {
     [SerializeField] private GameObject winScreen;
     [SerializeField] private GameObject loseScreen;
+    [SerializeField] private Animator star1;
+    [SerializeField] private Animator star2;
+    [SerializeField] private Animator star3;
     [SerializeField] private int maxTurns;
     private int stars;
+
     public void ActivateWinCanvas()
     {
         winScreen.SetActive(true);
@@ -20,7 +25,37 @@ public class UIManagerJ : Singleton<UIManagerJ>
         loseScreen.SetActive(true);
     }
 
-    public void ActivateLoseCanvas(int amountOfTurns)
+    [ContextMenu("Star1")]
+    public void ActivateStar(int numberStars)
+    {
+        switch (numberStars)
+        {
+            case 1:
+                star1.SetTrigger("Star1");
+                break;
+            case 2:
+                star1.SetTrigger("Star1");
+                Invoke("ActivateSecondStar", 1.0f);
+                break;
+            case 3:
+                star1.SetTrigger("Star1");
+                Invoke("ActivateSecondStar", 1.0f);
+                Invoke("ActivateThirdStar", 2.0f);
+                break;
+        }
+    }
+
+    private void ActivateSecondStar()
+    {
+        star2.SetTrigger("Star2");
+    }
+
+    private void ActivateThirdStar()
+    {
+        star3.SetTrigger("Star3");
+    }
+
+    public void ActivateWinCanvas(int amountOfTurns)
     {
         if (amountOfTurns > maxTurns)
         {
@@ -35,6 +70,7 @@ public class UIManagerJ : Singleton<UIManagerJ>
             stars = 3;
         }
 
-        loseScreen.SetActive(true);
+        winScreen.SetActive(true);
+        ActivateStar(stars);
     }
 }

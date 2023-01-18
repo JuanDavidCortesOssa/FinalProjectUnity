@@ -43,6 +43,7 @@ namespace ConquistaGO
         {
             turnsPerPlay = 0;
             audioManager = AudioManager.instance;
+            ///
         }
 
         /// <summary>
@@ -147,6 +148,19 @@ namespace ConquistaGO
         public void OnInvalidMove()
         {
             Debug.Log("Invalid move");
+        }
+
+        public void SelectSkin()
+        {
+            int skintype = PlayerPrefs.GetInt("skinNumber");
+            if (skintype == 1)
+            {
+
+            }
+            else
+            {
+
+            }
         }
     }
 }

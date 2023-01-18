@@ -20,7 +20,7 @@ namespace ConquistaGO
             AudioManager.instance.PlayVictorySfx();
             PlayerManager.Instance.SetActive(false);
             yield return new WaitForSeconds(0.5f);
-            UIManagerJ.Instance.ActivateWinCanvas();
+            UIManagerJ.Instance.ActivateWinCanvas(PlayerManager.Instance.turnsPerPlay);
             //Time.timeScale = 0;
             //yield return null;
         }
