@@ -36,10 +36,12 @@ namespace ConquistaGO
         public GameObject barrelGO;
         public bool isPlayerOnSpecialSquare = false;
         public PlayerData playerData;
+        public int turnsPerPlay;
         private AudioManager audioManager;
 
         private void Start()
         {
+            turnsPerPlay = 0;
             audioManager = AudioManager.instance;
         }
 
@@ -72,6 +74,10 @@ namespace ConquistaGO
         /// <param name="relativePosition">The position relative to the board where the player will be located</param>
         public void MovePlayer(Vector3 doMovePosition, Vector3 relativePosition)
         {
+            turnsPerPlay++;
+            Debug.Log("turn: " + turnsPerPlay);
+            audioManager.PlayMoveSfx();
+
             if (playerData.goldThrowingAbility.state != PlayerData.Abilities.State.Available)
             {
                 playerData.isMoving = true;
@@ -84,7 +90,6 @@ namespace ConquistaGO
                     });
                 playerData.currentPosition = relativePosition;
             }
-            audioManager.PlayMoveSfx();
 
                 if (playerData.camouflageAbility.state == PlayerData.Abilities.State.Available)
                 {
