@@ -137,5 +137,21 @@ namespace ConquistaGO
         {
             Debug.Log("Invalid move");
         }
+<<<<<<< Updated upstream
+=======
+
+        public void SelectSkin()
+        {
+            int skintype = PlayerPrefs.GetInt("skinNumber");
+            if (skintype == 1)
+            {
+
+            }
+            else
+            {
+                
+            }
+        }
+>>>>>>> Stashed changes
     }
 }

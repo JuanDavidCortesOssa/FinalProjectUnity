@@ -186,6 +186,7 @@ namespace ConquistaGO
         public void ActivateEnemy()
         {
             isActive = true;
+            SetActiveExclamationIcon(true);
             MovementPositions.Add(monitoredPosition - enemyData.orientation);
             MovementPositions.Add(monitoredPosition);
         }
@@ -193,6 +194,7 @@ namespace ConquistaGO
         public void DeactivateEnemy()
         {
             isActive = false;
+            SetActiveExclamationIcon(false);
             monitoredPosition = (enemyData.currentPosition + 2 * enemyData.orientation);
             for (int i = MovementPositions.Count - 1; i >= 0; i--)
             {

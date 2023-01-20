@@ -14,7 +14,12 @@ namespace ConquistaGO
             public List<Vector3> goldAttractionPath = new List<Vector3>();
         }
         public EnemyData enemyData = new EnemyData();
+<<<<<<< Updated upstream
 
+=======
+        private AudioManager audioManager = AudioManager.instance;
+        [SerializeField] private GameObject exclamationIcon; 
+>>>>>>> Stashed changes
         public virtual void OnTurn(LevelManager levelManager) { }
 
         /// <summary>
@@ -25,6 +30,7 @@ namespace ConquistaGO
             enemyData.currentPosition = new Vector3(-1, -1, -1);
             enemyData.orientation = new Vector3(0, 0, 0);
             Debug.Log("Enemy killed");
+            //StartCoroutine(DeactivateEnemy());
             gameObject.SetActive(false);
         }
 
@@ -36,6 +42,7 @@ namespace ConquistaGO
         public void GetAttracted(int attractionSquareId, LevelManager levelManager)
         {
             enemyData.goldAttractionPath = levelManager.PathFinding(levelManager.SquareReferencedId(enemyData.currentPosition), attractionSquareId);
+            StartCoroutine(ActivateExclamationForTime());
             Debug.Log(enemyData.enemyType + "Attracted to" + attractionSquareId);
         }
 
@@ -57,5 +64,23 @@ namespace ConquistaGO
 
             return angle;
         }
+
+        public void SetActiveExclamationIcon(bool activate)
+        {
+            exclamationIcon.SetActive(activate);
+        }
+
+        public IEnumerator ActivateExclamationForTime()
+        {
+            SetActiveExclamationIcon(true);
+            yield return new WaitForSeconds(1f);
+            SetActiveExclamationIcon(false);
+        }
+
+        //public IEnumerator DeactivateEnemy()
+        //{
+        //    yield return new WaitForSeconds(GameSettings.movementAnimationDuration-0.5f);
+        //    gameObject.SetActive(false);
+        //}
     }
 }
