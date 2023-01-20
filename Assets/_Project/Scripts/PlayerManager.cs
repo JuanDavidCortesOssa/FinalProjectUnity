@@ -32,8 +32,13 @@ namespace ConquistaGO
             public GoldThrowingAbility goldThrowingAbility = new GoldThrowingAbility();
             public CamouflageAbility camouflageAbility = new CamouflageAbility();
         }
+
+        [Header("PirateGOs")]
         public GameObject pirateGO;
         public GameObject barrelGO;
+        public GameObject pirateSkin1GO;
+        public GameObject pirateSkin2GO;
+
         public bool isPlayerOnSpecialSquare = false;
         public PlayerData playerData;
         public int turnsPerPlay;
@@ -42,6 +47,7 @@ namespace ConquistaGO
         private void Start()
         {
             turnsPerPlay = 0;
+            SelectSkin();
             audioManager = AudioManager.instance;
         }
 
@@ -155,11 +161,13 @@ namespace ConquistaGO
             int skintype = PlayerPrefs.GetInt("skinNumber");
             if (skintype == 1)
             {
-
+                pirateSkin1GO.SetActive(true);
+                pirateSkin2GO.SetActive(false);
             }
             else
             {
-                
+                pirateSkin1GO.SetActive(false);
+                pirateSkin2GO.SetActive(true);
             }
         }
     }
