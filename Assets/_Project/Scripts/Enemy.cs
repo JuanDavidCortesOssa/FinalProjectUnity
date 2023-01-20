@@ -64,6 +64,10 @@ namespace ConquistaGO
 
         public void SetActiveExclamationIcon(bool activate)
         {
+            if (activate)
+            {
+                audioManager.PlayExclamationSfx();
+            }
             exclamationIcon.SetActive(activate);
         }
 

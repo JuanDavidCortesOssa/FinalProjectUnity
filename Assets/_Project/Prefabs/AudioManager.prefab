@@ -308,3 +308,4 @@ MonoBehaviour:
   moveSfx: {fileID: 8300000, guid: bc27f54e3319c774ebebb7a0c4e43192, type: 3}
   victorySfx: {fileID: 8300000, guid: 0c9203a68ddc92f4ba91e077b0f67da4, type: 3}
   attackSfx: {fileID: 8300000, guid: 9039b2e40f91f774eb1ed4f2fa402bf0, type: 3}
+  exclamationSfx: {fileID: 8300000, guid: 8477d424c4930bf499d04e1ebd6fd50b, type: 3}

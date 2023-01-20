@@ -14,6 +14,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip moveSfx;
     [SerializeField] private AudioClip victorySfx;
     [SerializeField] private AudioClip attackSfx;
+    [SerializeField] private AudioClip exclamationSfx;
 
     public static AudioManager instance;
 
@@ -46,5 +47,10 @@ public class AudioManager : MonoBehaviour
     public void PlayAttackSfx()
     {
         soundSfx.PlayOneShot(attackSfx);
+    }
+
+    public void PlayExclamationSfx()
+    {
+        soundSfx.PlayOneShot(exclamationSfx);
     }
 }
