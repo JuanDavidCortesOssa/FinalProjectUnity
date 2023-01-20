@@ -36,6 +36,14 @@ namespace ConquistaGO
         public GameObject barrelGO;
         public bool isPlayerOnSpecialSquare = false;
         public PlayerData playerData;
+        public int turnsPerPlay;
+        private AudioManager audioManager;
+
+        private void Start()
+        {
+            turnsPerPlay = 0;
+            audioManager = AudioManager.instance;
+        }
 
         /// <summary>
         /// This method changes the state parameter of the player
@@ -68,6 +76,10 @@ namespace ConquistaGO
 
             if (playerData.goldThrowingAbility.state != PlayerData.Abilities.State.Available)
             {
+                turnsPerPlay++;
+                Debug.Log("turn: " + turnsPerPlay);
+                audioManager.PlayMoveSfx();
+
                 playerData.isMoving = true;
                 gameObject.transform.
                     DOMove(doMovePosition, GameSettings.movementAnimationDuration)
@@ -137,8 +149,6 @@ namespace ConquistaGO
         {
             Debug.Log("Invalid move");
         }
-<<<<<<< Updated upstream
-=======
 
         public void SelectSkin()
         {
@@ -152,6 +162,5 @@ namespace ConquistaGO
                 
             }
         }
->>>>>>> Stashed changes
     }
 }
