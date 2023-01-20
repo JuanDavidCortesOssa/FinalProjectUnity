@@ -242,7 +242,6 @@ namespace ConquistaGO
                         if (pressedSquare.squareData.isSpecialSquare && pressedSquare != currentSquare)
                         {
                             Debug.Log("Player: " + playerManager.playerData.currentPosition + "Square: " + pressedSquare.squareData.position);
-                            //PlayerSpecialSquareMove();
                             Square targetSquare = levelManager.SquareReferenced(pressedSquare.squareData.squareId);
                             targetSquare.SetTargetActive(false);
                             Vector3 movePosition = targetSquare.squareData.position;
@@ -266,7 +265,7 @@ namespace ConquistaGO
             }
             else
             {
-                levelManager.DectivateTargets();
+                levelManager.DectivateSpecialSquareTargets();
                 playerManager.isPlayerOnSpecialSquare = false;
             }
         }
@@ -297,7 +296,7 @@ namespace ConquistaGO
                                 Item item = levelManager.GetItemById(idActualPosition);
                                 playerManager.ThrowItem(item, square.squareData.squareId, square.transform.position + new Vector3(0, levelManager.itemHeight, 0));
                                 // Here it will deactivate the targets
-                                levelManager.DectivateTargets();
+                                levelManager.DectivateGoldThrowingTargets();
                                 
                                 item.GetComponent<GoldThrowingItem>().AttractEnemies(levelManager);
                                 playerManager.playerData.goldThrowingAbility.state = PlayerManager.PlayerData.Abilities.State.Unavailable;

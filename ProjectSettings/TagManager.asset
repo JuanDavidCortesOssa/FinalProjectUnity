@@ -7,6 +7,9 @@ TagManager:
   - SliderVolume
   - AudioMusic
   - AudioSfx
+  - Star1
+  - Star2
+  - Star3
   layers:
   - Default
   - TransparentFX

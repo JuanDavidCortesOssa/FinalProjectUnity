@@ -251,12 +251,24 @@ namespace ConquistaGO
         /// This method deactivates the GoldThrowingTargets
         /// </summary>
         /// <param name="levelManager"></param>
-        public void DectivateTargets()
+        public void DectivateGoldThrowingTargets()
         {
             for (int i = 0; i < squares.Count; i++)
             {
                 Square square = squares[i].GetComponent<Square>();
-                if (square.goldThrowingTargetGO.activeSelf)
+                if (square.targetGO.activeSelf)
+                {
+                    square.SetTargetActive(false);
+                }
+            }
+        }
+
+        public void DectivateSpecialSquareTargets()
+        {
+            for (int i = 0; i < squares.Count; i++)
+            {
+                Square square = squares[i].GetComponent<Square>();
+                if (square.squareData.isSpecialSquare)
                 {
                     square.SetTargetActive(false);
                 }
