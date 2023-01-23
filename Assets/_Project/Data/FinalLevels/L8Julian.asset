@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b4250f4cea8c744b8dfc784c815f50f, type: 3}
-  m_Name: L7J
+  m_Name: L8Julian
   m_EditorClassIdentifier: 
   level:
     board:
@@ -23,7 +23,7 @@ MonoBehaviour:
         state: 0
         squareId: 1
         isVisited: 0
-      - position: {x: 1, y: 7, z: 0}
+      - position: {x: 0, y: 6, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 0
@@ -31,129 +31,129 @@ MonoBehaviour:
         state: 0
         squareId: 2
         isVisited: 0
-      - position: {x: 2, y: 7, z: 0}
+      - position: {x: 0, y: 5, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 0
-        connections: 0200000004000000
+        connections: 020000000400000006000000
         state: 0
         squareId: 3
         isVisited: 0
-      - position: {x: 3, y: 7, z: 0}
+      - position: {x: 1, y: 5, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 0
-        connections: 030000000500000009000000
+        connections: 030000000500000007000000
         state: 0
         squareId: 4
         isVisited: 0
-      - position: {x: 4, y: 7, z: 0}
+      - position: {x: 2, y: 5, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 0
-        connections: 0400000006000000
+        connections: 0400000008000000
         state: 0
         squareId: 5
         isVisited: 0
-      - position: {x: 5, y: 7, z: 0}
+      - position: {x: 0, y: 4, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 0
-        connections: 05000000070000000a000000
+        connections: 030000000700000009000000
         state: 0
         squareId: 6
         isVisited: 0
-      - position: {x: 6, y: 7, z: 0}
+      - position: {x: 1, y: 4, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 0
-        connections: 0600000008000000
+        connections: 0400000006000000080000000a000000
         state: 0
         squareId: 7
         isVisited: 0
-      - position: {x: 7, y: 7, z: 0}
+      - position: {x: 2, y: 4, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 0
-        connections: 070000000e000000
+        connections: 05000000070000000b000000
         state: 0
         squareId: 8
         isVisited: 0
-      - position: {x: 3, y: 8, z: 0}
-        isSpecialSquare: 1
-        targetSquare: 10
+      - position: {x: 0, y: 3, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
         isFinalSquare: 0
-        connections: 040000000b000000
+        connections: 060000000a000000
         state: 0
         squareId: 9
         isVisited: 0
-      - position: {x: 5, y: 8, z: 0}
-        isSpecialSquare: 1
-        targetSquare: 9
+      - position: {x: 1, y: 3, z: 0}
+        isSpecialSquare: 0
+        targetSquare: 0
         isFinalSquare: 0
-        connections: 060000000d000000
+        connections: 07000000090000000b0000000d000000
         state: 0
         squareId: 10
         isVisited: 0
-      - position: {x: 3, y: 9, z: 0}
+      - position: {x: 2, y: 3, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 0
-        connections: 090000000c000000
+        connections: 080000000a000000
         state: 0
         squareId: 11
         isVisited: 0
-      - position: {x: 4, y: 9, z: 0}
+      - position: {x: 0, y: 2, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 0
-        connections: 0b0000000d000000
+        connections: 0f000000
         state: 0
         squareId: 12
         isVisited: 0
-      - position: {x: 5, y: 9, z: 0}
+      - position: {x: 1, y: 2, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 0
-        connections: 0c0000000a000000
+        connections: 0a0000000e000000
         state: 0
         squareId: 13
         isVisited: 0
-      - position: {x: 7, y: 6, z: 0}
+      - position: {x: 2, y: 2, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 0
-        connections: 080000000f000000
+        connections: 0d00000011000000
         state: 0
         squareId: 14
         isVisited: 0
-      - position: {x: 7, y: 5, z: 0}
-        isSpecialSquare: 0
+      - position: {x: 0, y: 1, z: 0}
+        isSpecialSquare: 1
         targetSquare: 0
         isFinalSquare: 0
-        connections: 0e00000010000000
+        connections: 0c00000012000000
         state: 0
         squareId: 15
         isVisited: 0
-      - position: {x: 7, y: 4, z: 0}
-        isSpecialSquare: 0
-        targetSquare: 0
+      - position: {x: 2, y: 1, z: 0}
+        isSpecialSquare: 1
+        targetSquare: 15
         isFinalSquare: 0
-        connections: 0f00000015000000
+        connections: 0e000000
         state: 0
-        squareId: 16
+        squareId: 17
         isVisited: 0
-      - position: {x: 6, y: 4, z: 0}
+      - position: {x: 0, y: 0, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 1
-        connections: 10000000
+        connections: 0f000000
         state: 0
-        squareId: 21
+        squareId: 18
         isVisited: 0
     playerData:
       state: 0
-      orientation: {x: 0, y: 0, z: 0}
+      orientation: {x: -1, y: -1, z: 0}
       currentTurn: {fileID: 0}
       entityItems: []
       initialSquare: 1
@@ -161,34 +161,39 @@ MonoBehaviour:
       isMoving: 0
     enemiesData:
     - state: 1
-      orientation: {x: 1, y: 0, z: 0}
+      orientation: {x: 0, y: -1, z: 0}
       currentTurn: {fileID: 0}
       entityItems: []
-      initialSquare: 5
-      currentPosition: {x: 4, y: 7, z: 0}
+      initialSquare: 7
+      currentPosition: {x: 1, y: 4, z: 0}
       isMoving: 0
-      enemyType: 1
-      goldAttractionPath: []
-    - state: 1
-      orientation: {x: 0, y: 1, z: 0}
-      currentTurn: {fileID: 0}
-      entityItems: []
-      initialSquare: 15
-      currentPosition: {x: 7, y: 5, z: 0}
-      isMoving: 0
-      enemyType: 1
+      enemyType: 2
       goldAttractionPath: []
     - state: 1
       orientation: {x: -1, y: 0, z: 0}
       currentTurn: {fileID: 0}
       entityItems: []
-      initialSquare: 12
-      currentPosition: {x: 4, y: 9, z: 0}
+      initialSquare: 8
+      currentPosition: {x: 2, y: 4, z: 0}
       isMoving: 0
       enemyType: 2
       goldAttractionPath: []
-    items:
-    - itemType: 1
-      currentSquare: 8
-      initialSquare: 8
-      throwingSquares: 
+    - state: 1
+      orientation: {x: -1, y: 0, z: 0}
+      currentTurn: {fileID: 0}
+      entityItems: []
+      initialSquare: 11
+      currentPosition: {x: 2, y: 3, z: 0}
+      isMoving: 0
+      enemyType: 2
+      goldAttractionPath: []
+    - state: 1
+      orientation: {x: 0, y: 1, z: 0}
+      currentTurn: {fileID: 0}
+      entityItems: []
+      initialSquare: 9
+      currentPosition: {x: 0, y: 3, z: 0}
+      isMoving: 0
+      enemyType: 0
+      goldAttractionPath: []
+    items: []
