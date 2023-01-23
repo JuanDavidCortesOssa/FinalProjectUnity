@@ -201,20 +201,20 @@ MonoBehaviour:
       isMoving: 0
     enemiesData:
     - state: 1
-      orientation: {x: 0, y: -1, z: 0}
+      orientation: {x: -1, y: 0, z: 0}
       currentTurn: {fileID: 0}
       entityItems: []
       initialSquare: 8
       currentPosition: {x: 4, y: 2, z: 0}
       isMoving: 0
-      enemyType: 2
+      enemyType: 1
       goldAttractionPath: []
     - state: 1
       orientation: {x: 1, y: 0, z: 0}
       currentTurn: {fileID: 0}
       entityItems: []
-      initialSquare: 7
-      currentPosition: {x: 3, y: 0, z: 0}
+      initialSquare: 5
+      currentPosition: {x: 2, y: 0, z: 0}
       isMoving: 0
       enemyType: 2
       goldAttractionPath: []
@@ -245,15 +245,24 @@ MonoBehaviour:
       isMoving: 0
       enemyType: 2
       goldAttractionPath: []
+    - state: 1
+      orientation: {x: 0, y: -1, z: 0}
+      currentTurn: {fileID: 0}
+      entityItems: []
+      initialSquare: 9
+      currentPosition: {x: 4, y: 1, z: 0}
+      isMoving: 0
+      enemyType: 2
+      goldAttractionPath: []
     items:
     - itemType: 0
-      currentSquare: 10
-      initialSquare: 10
-      throwingSquares: 
+      currentSquare: 7
+      initialSquare: 7
+      throwingSquares: 080000000a0000000b000000
     - itemType: 0
       currentSquare: 11
       initialSquare: 11
-      throwingSquares: 
+      throwingSquares: 0c0000000e000000
     - itemType: 1
       currentSquare: 17
       initialSquare: 17

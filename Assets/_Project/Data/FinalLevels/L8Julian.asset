@@ -15,7 +15,7 @@ MonoBehaviour:
   level:
     board:
       squares:
-      - position: {x: 0, y: 7, z: 0}
+      - position: {x: 0, y: 0, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 0
@@ -23,7 +23,7 @@ MonoBehaviour:
         state: 0
         squareId: 1
         isVisited: 0
-      - position: {x: 0, y: 6, z: 0}
+      - position: {x: 1, y: 0, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 0
@@ -31,7 +31,7 @@ MonoBehaviour:
         state: 0
         squareId: 2
         isVisited: 0
-      - position: {x: 0, y: 5, z: 0}
+      - position: {x: 2, y: 0, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 0
@@ -39,7 +39,7 @@ MonoBehaviour:
         state: 0
         squareId: 3
         isVisited: 0
-      - position: {x: 1, y: 5, z: 0}
+      - position: {x: 2, y: 1, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 0
@@ -47,7 +47,7 @@ MonoBehaviour:
         state: 0
         squareId: 4
         isVisited: 0
-      - position: {x: 2, y: 5, z: 0}
+      - position: {x: 2, y: 2, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 0
@@ -55,7 +55,7 @@ MonoBehaviour:
         state: 0
         squareId: 5
         isVisited: 0
-      - position: {x: 0, y: 4, z: 0}
+      - position: {x: 3, y: 0, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 0
@@ -63,7 +63,7 @@ MonoBehaviour:
         state: 0
         squareId: 6
         isVisited: 0
-      - position: {x: 1, y: 4, z: 0}
+      - position: {x: 3, y: 1, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 0
@@ -71,7 +71,7 @@ MonoBehaviour:
         state: 0
         squareId: 7
         isVisited: 0
-      - position: {x: 2, y: 4, z: 0}
+      - position: {x: 3, y: 2, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
         state: 0
         squareId: 8
         isVisited: 0
-      - position: {x: 0, y: 3, z: 0}
+      - position: {x: 4, y: 0, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 0
@@ -87,7 +87,7 @@ MonoBehaviour:
         state: 0
         squareId: 9
         isVisited: 0
-      - position: {x: 1, y: 3, z: 0}
+      - position: {x: 4, y: 1, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
         state: 0
         squareId: 10
         isVisited: 0
-      - position: {x: 2, y: 3, z: 0}
+      - position: {x: 4, y: 2, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
         state: 0
         squareId: 11
         isVisited: 0
-      - position: {x: 0, y: 2, z: 0}
+      - position: {x: 5, y: 0, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
         state: 0
         squareId: 12
         isVisited: 0
-      - position: {x: 1, y: 2, z: 0}
+      - position: {x: 5, y: 1, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 0
@@ -119,7 +119,7 @@ MonoBehaviour:
         state: 0
         squareId: 13
         isVisited: 0
-      - position: {x: 2, y: 2, z: 0}
+      - position: {x: 5, y: 2, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
         state: 0
         squareId: 14
         isVisited: 0
-      - position: {x: 0, y: 1, z: 0}
+      - position: {x: 6, y: 0, z: 0}
         isSpecialSquare: 1
         targetSquare: 0
         isFinalSquare: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
         state: 0
         squareId: 15
         isVisited: 0
-      - position: {x: 2, y: 1, z: 0}
+      - position: {x: 6, y: 2, z: 0}
         isSpecialSquare: 1
         targetSquare: 15
         isFinalSquare: 0
@@ -143,7 +143,7 @@ MonoBehaviour:
         state: 0
         squareId: 17
         isVisited: 0
-      - position: {x: 0, y: 0, z: 0}
+      - position: {x: 7, y: 0, z: 0}
         isSpecialSquare: 0
         targetSquare: 0
         isFinalSquare: 1
@@ -157,42 +157,42 @@ MonoBehaviour:
       currentTurn: {fileID: 0}
       entityItems: []
       initialSquare: 1
-      currentPosition: {x: 0, y: 7, z: 0}
+      currentPosition: {x: 0, y: 0, z: 0}
       isMoving: 0
     enemiesData:
+    - state: 1
+      orientation: {x: 1, y: 0, z: 0}
+      currentTurn: {fileID: 0}
+      entityItems: []
+      initialSquare: 7
+      currentPosition: {x: 3, y: 1, z: 0}
+      isMoving: 0
+      enemyType: 2
+      goldAttractionPath: []
     - state: 1
       orientation: {x: 0, y: -1, z: 0}
       currentTurn: {fileID: 0}
       entityItems: []
-      initialSquare: 7
-      currentPosition: {x: 1, y: 4, z: 0}
-      isMoving: 0
-      enemyType: 2
-      goldAttractionPath: []
-    - state: 1
-      orientation: {x: -1, y: 0, z: 0}
-      currentTurn: {fileID: 0}
-      entityItems: []
       initialSquare: 8
-      currentPosition: {x: 2, y: 4, z: 0}
+      currentPosition: {x: 3, y: 2, z: 0}
       isMoving: 0
       enemyType: 2
       goldAttractionPath: []
     - state: 1
-      orientation: {x: -1, y: 0, z: 0}
+      orientation: {x: 0, y: -1, z: 0}
       currentTurn: {fileID: 0}
       entityItems: []
       initialSquare: 11
-      currentPosition: {x: 2, y: 3, z: 0}
+      currentPosition: {x: 4, y: 2, z: 0}
       isMoving: 0
       enemyType: 2
       goldAttractionPath: []
     - state: 1
-      orientation: {x: 0, y: 1, z: 0}
+      orientation: {x: -1, y: 0, z: 0}
       currentTurn: {fileID: 0}
       entityItems: []
       initialSquare: 9
-      currentPosition: {x: 0, y: 3, z: 0}
+      currentPosition: {x: 4, y: 0, z: 0}
       isMoving: 0
       enemyType: 0
       goldAttractionPath: []
