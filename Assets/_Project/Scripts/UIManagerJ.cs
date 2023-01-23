@@ -35,12 +35,12 @@ public class UIManagerJ : Singleton<UIManagerJ>
                 break;
             case 2:
                 star1.SetTrigger("Star1");
-                Invoke("ActivateSecondStar", 1.0f);
+                Invoke("ActivateSecondStar", 0.5f);
                 break;
             case 3:
                 star1.SetTrigger("Star1");
-                Invoke("ActivateSecondStar", 1.0f);
-                Invoke("ActivateThirdStar", 2.0f);
+                Invoke("ActivateSecondStar", 0.5f);
+                Invoke("ActivateThirdStar", 1.0f);
                 break;
         }
     }
