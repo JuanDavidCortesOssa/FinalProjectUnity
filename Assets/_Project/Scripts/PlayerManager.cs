@@ -160,11 +160,11 @@ namespace ConquistaGO
         public void SelectSkin()
         {
             int skintype = PlayerPrefs.GetInt("skinNumber");
-            if (skintype == 1)
+            if (skintype == 3)
             {
-                pirateSkin1GO.SetActive(true);
+                pirateSkin3GO.SetActive(true);
                 pirateSkin2GO.SetActive(false);
-                pirateSkin3GO.SetActive(false);
+                pirateSkin1GO.SetActive(false);
             }
             else if (skintype == 2)
             {
@@ -174,9 +174,9 @@ namespace ConquistaGO
             }
             else
             {
-                pirateSkin3GO.SetActive(true);
+                pirateSkin1GO.SetActive(true);
                 pirateSkin2GO.SetActive(false);
-                pirateSkin1GO.SetActive(false);
+                pirateSkin3GO.SetActive(false);
             }
         }
     }
