@@ -14,7 +14,7 @@ public class VolumeController : MonoBehaviour
     {
         audioMusic = GameObject.FindGameObjectWithTag("AudioMusic");
         audioSfx = GameObject.FindGameObjectWithTag("AudioSfx");
-        volumeControllerMusic.value = PlayerPrefs.GetFloat("volumeMusic", 1f);
+        volumeControllerMusic.value = PlayerPrefs.GetFloat("volumeMusic", 0.5f);
         volumeControllerSfx.value = PlayerPrefs.GetFloat("volumeSfx", 1f);
     }
 

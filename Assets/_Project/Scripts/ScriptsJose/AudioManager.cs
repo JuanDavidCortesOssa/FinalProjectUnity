@@ -16,7 +16,6 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip attackSfx;
     [SerializeField] private AudioClip exclamationSfx;
     [SerializeField] private AudioClip gullSfx;
-    [SerializeField] private AudioClip beachSfx;
 
     public static AudioManager instance;
 
@@ -59,10 +58,5 @@ public class AudioManager : MonoBehaviour
     public void PlayGullSfx()
     {
         soundSfx.PlayOneShot(gullSfx);
-    }
-
-    public void PlayBeachSfx()
-    {
-        soundSfx.PlayOneShot(beachSfx);
     }
 }
