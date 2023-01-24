@@ -5,13 +5,20 @@ using UnityEngine;
 public class ActivePause : MonoBehaviour
 {
     [SerializeField] private GameObject panelPause;
+    [SerializeField] private GameObject panelHelp;
     public bool paused;
+    public bool help;
 
     private void Update()
     {
-        if(Input.GetKey(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape) && help == false)
         {
             ChangePaused();
+        }
+
+        if(Input.GetKeyDown(KeyCode.Escape) && help == true)
+        {
+            Help();
         }
     }
 
@@ -27,6 +34,22 @@ public class ActivePause : MonoBehaviour
         {
             paused = false;
             panelPause.SetActive(false);
+            Time.timeScale = 1.0f;
+        }
+    }
+
+    public void Help()
+    {
+        if (!help)
+        {
+            help = true;
+            panelHelp.SetActive(true);
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            help = false;
+            panelHelp.SetActive(false);
             Time.timeScale = 1.0f;
         }
     }

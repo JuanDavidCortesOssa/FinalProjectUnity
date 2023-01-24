@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ChangeSkinMainUI : MonoBehaviour
 {
@@ -17,12 +18,17 @@ public class ChangeSkinMainUI : MonoBehaviour
     [SerializeField] private GameObject imgCheck2;
     [SerializeField] private GameObject skinSelect3;
     [SerializeField] private GameObject imgCheck3;
+    [SerializeField] private GameObject textObject2;
+    [SerializeField] private GameObject textObject3;
+    [SerializeField] private TMP_Text skinText2;
+    [SerializeField] private TMP_Text skinText3;
+    private int levelsClompleted;
 
     private void Start()
     {
-        PlayerPrefs.SetInt("skinsUnlocked", 1);
         skinsUnlocked = PlayerPrefs.GetInt("skinsUnlocked", 1);
         skinNumber = PlayerPrefs.GetInt("skinNumber", 1);
+        levelsClompleted = PlayerPrefs.GetInt("levelsCompleted");
         LoadSkinsUnlocked(skinsUnlocked);
         ChangeSkinMain(skinNumber);
         LoadSkinSelected(skinNumber);
@@ -39,6 +45,9 @@ public class ChangeSkinMainUI : MonoBehaviour
                 skinUnlock3.SetActive(false);
                 skinSelect2.SetActive(false);
                 skinSelect3.SetActive(false);
+                textObject2.SetActive(true);
+                textObject3.SetActive(true);
+                LoadTextSkin(2);
                 break;
             case 2:
                 skinLock2.SetActive(false);
@@ -47,6 +56,9 @@ public class ChangeSkinMainUI : MonoBehaviour
                 skinUnlock3.SetActive(false);
                 skinSelect2.SetActive(true);
                 skinSelect3.SetActive(false);
+                textObject2.SetActive(false);
+                textObject3.SetActive(true);
+                LoadTextSkin(1);
                 break;
             case 3:
                 skinLock2.SetActive(false);
@@ -55,6 +67,22 @@ public class ChangeSkinMainUI : MonoBehaviour
                 skinUnlock3.SetActive(true);
                 skinSelect2.SetActive(true);
                 skinSelect3.SetActive(true);
+                textObject2.SetActive(false);
+                textObject3.SetActive(false);
+                break;
+        }
+    }
+
+    private void LoadTextSkin(int textNumber)
+    {
+        switch(textNumber)
+        {
+            case 1:
+                skinText3.text = levelsClompleted.ToString();
+                break;
+            case 2:
+                skinText2.text = levelsClompleted.ToString();
+                skinText3.text = levelsClompleted.ToString();
                 break;
         }
     }
@@ -94,11 +122,5 @@ public class ChangeSkinMainUI : MonoBehaviour
                 imgCheck3.SetActive(true);
                 break;
         }
-    }
-
-    [ContextMenu("Unlock")]
-    public void unlockSkin()
-    {
-        LoadSkinsUnlocked(3);
     }
 }

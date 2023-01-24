@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1024,6 +1024,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 178582368272742984, guid: 75b0c8cabbc802142bb5222a7e587095, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 764823722840629917, guid: 75b0c8cabbc802142bb5222a7e587095, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1022601582679794816, guid: 75b0c8cabbc802142bb5222a7e587095, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1115,6 +1123,38 @@ PrefabInstance:
     - target: {fileID: 1022601583127506244, guid: 75b0c8cabbc802142bb5222a7e587095, type: 3}
       propertyPath: maxTurns
       value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589716794519976875, guid: 75b0c8cabbc802142bb5222a7e587095, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777467388464463912, guid: 75b0c8cabbc802142bb5222a7e587095, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5178220515316876659, guid: 75b0c8cabbc802142bb5222a7e587095, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5936707156875450162, guid: 75b0c8cabbc802142bb5222a7e587095, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6267274790819480453, guid: 75b0c8cabbc802142bb5222a7e587095, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6503527475072021553, guid: 75b0c8cabbc802142bb5222a7e587095, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7363473008606431582, guid: 75b0c8cabbc802142bb5222a7e587095, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388939299210290618, guid: 75b0c8cabbc802142bb5222a7e587095, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75b0c8cabbc802142bb5222a7e587095, type: 3}
