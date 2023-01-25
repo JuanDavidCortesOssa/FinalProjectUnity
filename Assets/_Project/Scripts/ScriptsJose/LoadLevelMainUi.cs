@@ -50,6 +50,7 @@ public class LoadLevelMainUi : MonoBehaviour
     public void RestartLevels()
     {
         LevelsCompletedManager.instance.RestartLevelsCompleted();
+        LevelsCompletedManager.instance.RestartStars();
         LevelsCompletedManager.instance.LoadNextLevel();
     }
 }
