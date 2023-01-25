@@ -6,51 +6,51 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Project/Scenes/UiJose/MainMenu.unity
+    path: Assets/Scenes/Ui/MainMenu.unity
     guid: f1d70fbdb801c8f4ea750f3035abfced
   - enabled: 1
-    path: Assets/_Project/Scenes/Finals/Level1.unity
+    path: Assets/Scenes/Finals/Level1.unity
     guid: 7eae17806fc1fc241abdc771ae575a9e
   - enabled: 1
-    path: Assets/_Project/Scenes/Finals/Level2.unity
+    path: Assets/Scenes/Finals/Level2.unity
     guid: 11617770033aeb440beeb2c0a825b35a
   - enabled: 1
-    path: Assets/_Project/Scenes/Finals/Level3.unity
+    path: Assets/Scenes/Finals/Level3.unity
     guid: b983fabba46b5e04eabdd9ff8beeca2e
   - enabled: 1
-    path: Assets/_Project/Scenes/Finals/Level4.unity
+    path: Assets/Scenes/Finals/Level4.unity
     guid: 42500d61a25a5ab47bcc0fb299e92bb8
   - enabled: 1
-    path: Assets/_Project/Scenes/Finals/Level5.unity
+    path: Assets/Scenes/Finals/Level5.unity
     guid: 344b429e46e98a34389144c4294b8cfb
   - enabled: 1
-    path: Assets/_Project/Scenes/Finals/Level6.unity
+    path: Assets/Scenes/Finals/Level6.unity
     guid: da12bde4d937c074a88050eb37acfe03
   - enabled: 1
-    path: Assets/_Project/Scenes/UiJose/NewSkinLevel6.unity
+    path: Assets/Scenes/Ui/NewSkinLevel6.unity
     guid: 34139fc3099ec964d9f0ed9be6f02dd7
   - enabled: 1
     path: Assets/_Project/Scenes/Finals/Level7.unity
     guid: e31b6760acab0d145b2a7f7f2a8b543f
   - enabled: 1
-    path: Assets/_Project/Scenes/Finals/Level8.unity
+    path: Assets/Scenes/Finals/Level7.unity
     guid: eeec19ffb0c860048b6b773be142c39d
   - enabled: 1
-    path: Assets/_Project/Scenes/Finals/Level9.unity
+    path: Assets/Scenes/Finals/Level9.unity
     guid: 1301929e252e0ac4191077bdc0433558
   - enabled: 1
-    path: Assets/_Project/Scenes/Finals/Level10.unity
+    path: Assets/Scenes/Finals/Level10.unity
     guid: 973bbc6b541e6034ea402903ae58b48b
   - enabled: 1
-    path: Assets/_Project/Scenes/Finals/Level11.unity
+    path: Assets/Scenes/Finals/Level11.unity
     guid: fbf9a736925187546bcadc637c4b875c
   - enabled: 1
-    path: Assets/_Project/Scenes/Finals/Level12.unity
+    path: Assets/Scenes/Finals/Level12.unity
     guid: 068fdb66a365dbc4ebe9f35538885324
   - enabled: 1
-    path: Assets/_Project/Scenes/UiJose/WinScene.unity
+    path: Assets/Scenes/Ui/WinScene.unity
     guid: a64fab9e0ef88054f9945701d5e8a288
   - enabled: 1
-    path: Assets/_Project/Scenes/UiJose/Credits.unity
+    path: Assets/Scenes/Ui/Credits.unity
     guid: 6dc90e24ee229f44ba364aefa1aab0f2
   m_configObjects: {}
