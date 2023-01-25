@@ -66,7 +66,7 @@ namespace ConquistaGO
                 SpecialSquareMouseInput();
             }
 
-            if (Input.GetMouseButton(0))
+            /*if (Input.GetMouseButton(0))
             {
                 float XAxis = Math.Abs(Input.GetAxis("Mouse X"));
                 float YAxis = Math.Abs(Input.GetAxis("Mouse Y"));
@@ -94,7 +94,7 @@ namespace ConquistaGO
                         PlayerMovementRequest(playerManager.playerData.currentPosition + new Vector3(-1, 0));
                     }
                 }
-            }
+            }*/
         }
 
         /// <summary>
