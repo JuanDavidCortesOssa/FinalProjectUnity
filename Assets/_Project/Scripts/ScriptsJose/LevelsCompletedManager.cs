@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class LevelsCompletedManager : MonoBehaviour
 {
     private int levelCompleted;
+    private int tempStars;
+    public bool levelStars = false;
 
     public static LevelsCompletedManager instance;
 
@@ -18,10 +20,13 @@ public class LevelsCompletedManager : MonoBehaviour
         else instance = this;
         DontDestroyOnLoad(gameObject);
         levelCompleted = PlayerPrefs.GetInt("levelsCompleted", 0);
+        tempStars = PlayerPrefs.GetInt("numberStars", 0);
+        Debug.Log(tempStars);
     }
 
     public void LoadNextLevel()
     {
+        levelStars = false;
         NextLevel(levelCompleted);
     }
 
@@ -68,6 +73,7 @@ public class LevelsCompletedManager : MonoBehaviour
             case 12:
                 PlayerPrefs.SetInt("skinsUnlocked", 3);
                 SceneManager.LoadScene(14);
+                PlayerPrefs.SetInt("numberStars", tempStars);
                 break;
             case 13:
                 SceneManager.LoadScene(0);
@@ -77,13 +83,36 @@ public class LevelsCompletedManager : MonoBehaviour
 
     public void SaveLevelCompleted()
     {
-        PlayerPrefs.SetInt("levelsCompleted", + 1);
         levelCompleted++;
+        PlayerPrefs.SetInt("levelsCompleted", levelCompleted);
     }
 
     public void RestartLevelsCompleted()
     {
         PlayerPrefs.SetInt("levelsCompleted", 0);
+        PlayerPrefs.SetInt("numberStars", 0);
+        tempStars = 0;
+        levelStars = false;
         levelCompleted = 0;
+    }
+
+    public void AddTemporallyStars()
+    {
+        tempStars = tempStars + 3;
+        levelStars = true;
+        Debug.Log(tempStars);
+    }
+
+    public void RemoveTempStars()
+    {
+        tempStars = tempStars - 3;
+        levelStars = false;
+    }
+
+    public void SaveStars()
+    {
+        levelStars = false;
+        PlayerPrefs.SetInt("numberStars", tempStars);
+        Debug.Log(tempStars);
     }
 }

@@ -13,9 +13,16 @@ public class LoadLevelMainUi : MonoBehaviour
     private void Start()
     {
         progressLevel = PlayerPrefs.GetInt("levelsCompleted");
+        Debug.Log(progressLevel);
         if (progressLevel < 1)
         {
             buttonContinue.enabled = false;
+        }
+        else if (progressLevel > 12)
+        {
+            buttonContinue.enabled = false;
+            LevelsCompletedManager.instance.RestartLevelsCompleted();
+            progressLevel = 0;
         }
         else
         {
@@ -25,7 +32,7 @@ public class LoadLevelMainUi : MonoBehaviour
 
     public void NewGame()
     {
-        if (progressLevel < 1 || progressLevel > 12)
+        if (progressLevel < 1)
         {
             LevelsCompletedManager.instance.LoadNextLevel();
         }

@@ -38,9 +38,10 @@ public class UIManagerJ : Singleton<UIManagerJ>
                 Invoke("ActivateSecondStar", 0.5f);
                 break;
             case 3:
+                LevelsCompletedManager.instance.AddTemporallyStars();
                 star1.SetTrigger("Star1");
-                Invoke("ActivateSecondStar", 0.5f);
-                Invoke("ActivateThirdStar", 1.0f);
+                Invoke("ActivateSecondStar", 0.25f);
+                Invoke("ActivateThirdStar", 0.5f);
                 break;
         }
     }

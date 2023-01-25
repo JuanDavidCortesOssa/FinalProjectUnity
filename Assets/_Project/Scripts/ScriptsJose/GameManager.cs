@@ -29,6 +29,10 @@ public class GameManager : MonoBehaviour
 
     public void RestartScene()
     {
+        if(LevelsCompletedManager.instance.levelStars == true)
+        {
+            LevelsCompletedManager.instance.RemoveTempStars();
+        }
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
@@ -58,6 +62,7 @@ public class GameManager : MonoBehaviour
     public void ExitLevelCompleted()
     {
         LevelsCompletedManager.instance.SaveLevelCompleted();
+        LevelsCompletedManager.instance.SaveStars();
         SceneManager.LoadScene(0);
     }
 
@@ -73,5 +78,11 @@ public class GameManager : MonoBehaviour
         {
             NextLevel();
         }
+    }
+
+    public void RestartAllGame()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(0);
     }
 }

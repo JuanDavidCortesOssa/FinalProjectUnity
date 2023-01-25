@@ -39,6 +39,7 @@ namespace ConquistaGO
         public GameObject pirateSkin1GO;
         public GameObject pirateSkin2GO;
         public GameObject pirateSkin3GO;
+        public GameObject pirateSkin4GO;
 
         public bool isPlayerOnSpecialSquare = false;
         public PlayerData playerData;
@@ -160,8 +161,16 @@ namespace ConquistaGO
         public void SelectSkin()
         {
             int skintype = PlayerPrefs.GetInt("skinNumber");
-            if (skintype == 3)
+            if (skintype == 4)
             {
+                pirateSkin4GO.SetActive(true);
+                pirateSkin3GO.SetActive(false);
+                pirateSkin2GO.SetActive(false);
+                pirateSkin1GO.SetActive(false);
+            }
+            else if (skintype == 3)
+            {
+                pirateSkin4GO.SetActive(false);
                 pirateSkin3GO.SetActive(true);
                 pirateSkin2GO.SetActive(false);
                 pirateSkin1GO.SetActive(false);
@@ -171,12 +180,14 @@ namespace ConquistaGO
                 pirateSkin2GO.SetActive(true);
                 pirateSkin1GO.SetActive(false);
                 pirateSkin3GO.SetActive(false);
+                pirateSkin4GO.SetActive(false);
             }
             else
             {
                 pirateSkin1GO.SetActive(true);
                 pirateSkin2GO.SetActive(false);
                 pirateSkin3GO.SetActive(false);
+                pirateSkin4GO.SetActive(false);
             }
         }
     }
