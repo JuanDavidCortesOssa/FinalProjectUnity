@@ -31,10 +31,10 @@ EditorBuildSettings:
     guid: 34139fc3099ec964d9f0ed9be6f02dd7
   - enabled: 1
     path: Assets/_Project/Scenes/Finals/Level7.unity
-    guid: e31b6760acab0d145b2a7f7f2a8b543f
+    guid: eeec19ffb0c860048b6b773be142c39d
   - enabled: 1
     path: Assets/_Project/Scenes/Finals/Level8.unity
-    guid: eeec19ffb0c860048b6b773be142c39d
+    guid: aa07b95d69fd8a243af91bc7f7309e13
   - enabled: 1
     path: Assets/_Project/Scenes/Finals/Level9.unity
     guid: 1301929e252e0ac4191077bdc0433558
