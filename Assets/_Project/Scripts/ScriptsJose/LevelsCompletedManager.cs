@@ -27,6 +27,7 @@ public class LevelsCompletedManager : MonoBehaviour
     public void LoadNextLevel()
     {
         levelStars = false;
+        SaveStars();
         NextLevel(levelCompleted);
     }
 
@@ -90,10 +91,14 @@ public class LevelsCompletedManager : MonoBehaviour
     public void RestartLevelsCompleted()
     {
         PlayerPrefs.SetInt("levelsCompleted", 0);
+        levelCompleted = 0;
+    }
+
+    public void RestartStars()
+    {
         PlayerPrefs.SetInt("numberStars", 0);
         tempStars = 0;
         levelStars = false;
-        levelCompleted = 0;
     }
 
     public void AddTemporallyStars()
