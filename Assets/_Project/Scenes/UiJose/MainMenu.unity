@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5789231, g: 0.6160044, b: 0.60869724, a: 1}
+  m_IndirectSpecularColor: {r: 0.19777448, g: 0.3489679, b: 0.46726143, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4335,7 +4335,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -515.2412, y: -138.85632}
+  m_AnchoredPosition: {x: -541, y: -138.85632}
   m_SizeDelta: {x: 458.4773, y: 477.7126}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &605122465
@@ -6836,7 +6836,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1024528579
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12265,7 +12265,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1589797520
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12803,7 +12803,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -162.47, y: -107.46}
+  m_AnchoredPosition: {x: -453, y: -107.46}
   m_SizeDelta: {x: 499.06, y: 556.26}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!1 &1675728850
@@ -16056,18 +16056,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1589797519}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &2093203945
 MonoBehaviour:
